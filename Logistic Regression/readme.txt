@@ -1,0 +1,1 @@
+The goal of this sub-project is to identify features which identify unique circadian behavior. We are using Logistic regression to predict the spider species using multiple circadian behavioral measures as predictors
