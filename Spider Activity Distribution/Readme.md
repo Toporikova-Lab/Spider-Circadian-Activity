@@ -1,0 +1,1 @@
+The goal of this analysis is to develop a code which extract duration of uninterupted bouts of activity from the locomotive recording of a spider. The code remove the noise (activity events less than 2 seconds), collects duration of all activity events, build histogram and matches it to the statistical distribution
