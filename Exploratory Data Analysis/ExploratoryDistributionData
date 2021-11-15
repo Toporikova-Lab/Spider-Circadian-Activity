@@ -1,5 +1,4 @@
 ---
-title: "MetWit_oct23"
 output: html_document
 ---
 
@@ -229,13 +228,6 @@ movementDF30
 #histogram for values without 1
 hist(movementDF30$timediff, breaks = 35)
 ```
-
-#filter 1 and 2 sec events
-#figure out how to stitch certain events that we can consider as 1 long movement
-
-#run a spider simulatotion
-#try to create a best fit line (poisson(exp) or beta distribution)
-#fix the bidwidths 
 
 
 
