@@ -1,0 +1,242 @@
+---
+title: "MetWit_oct23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library("TTR")
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library("pivottabler")
+library("tidyverse")
+library(tibble)
+library("lubridate") 
+library(sqldf)
+```
+
+```{r}
+MetWit<-read.csv("Metazygia Wittfeldae Monitor 1_LD.csv", header=TRUE)
+```
+
+```{r}
+#finding the maximum number of columns
+maxColNum<-ncol(MetWit)
+
+#Binarising all the Data where 1=moved, 0=no movement
+MetWit[,3:maxColNum] <- ifelse(MetWit[,3:maxColNum] > 0,1,0)
+```
+```{r}
+#splitting up Date.Time into two columns
+MetWit$Date<-as.Date(MetWit$Date.Time)
+MetWit$Time <- format(as.POSIXct(MetWit$Date.Time), format = "%H:%M")
+```
+
+```{r}
+#Subsetting the dataframe into different days
+subsetDF<-function(df,date){
+  df[df[["Date"]]==date,]
+}
+Apr21<-subsetDF(MetWit, "2017-04-21")
+Apr22<-subsetDF(MetWit, "2017-04-22")
+Apr23<-subsetDF(MetWit, "2017-04-23")
+Apr24<-subsetDF(MetWit, "2017-04-24")
+Apr25<-subsetDF(MetWit, "2017-04-25")
+
+Apr25
+Spider2Apr25<-Apr25%>%
+  select(Monitor.1.Spider.2)
+
+
+Spider2Apr25
+
+for (i in nrow(Spider2Apr25$Monitor.1.Spider.2)){
+  if i 
+}
+
+```
+
+```{r}
+#Finding when spiders goes from resting to moving
+#creating new df for spider 32
+
+#start time
+restToMove32<-MetWit%>%
+  select(Light, Monitor.1.Spider.32,Date.Time)%>%
+  filter(Monitor.1.Spider.32-lag(Monitor.1.Spider.32)>=1)%>%
+  rename(startTime=Date.Time)%>%
+  mutate(number=row_number())%>%
+  rename(startLight=Light)
+restToMove32
+
+#function that shows from Move to Rest ( the minute where there is no movement)
+#stop time
+moveToRest32<-MetWit%>%
+  select(Light, Monitor.1.Spider.32,Date.Time)%>%
+  filter(Monitor.1.Spider.32-lag(Monitor.1.Spider.32)<0)%>%
+  rename(stopTime=Date.Time)%>%
+  mutate(number=row_number())%>%
+  rename(stopLight=Light)
+moveToRest32
+
+#creating a new df with start and stop times using SQL
+movementDF32<-sqldf("SELECT startTime, stopTime FROM restToMove32 LEFT JOIN moveToRest32 USING(number)")
+movementDF32
+
+#calculating the time difference
+movementDF32$timediff<-difftime(movementDF32$stopTime,movementDF32$startTime)
+movementDF32
+```
+#check an extra event for when there is a 1 min diff then make a distribution
+#then remove 2 min events and make a distribution
+#(don't bother with removing non moving times yet)
+
+
+
+```{r}
+movementDF32$timediff<-as.numeric(movementDF32$timediff)
+movementDF32
+hist(movementDF32$timediff, breaks = 35)
+
+
+```
+
+```{r}
+#removing values of 1 from the df
+movementDF32
+movementDF32<-movementDF32%>%
+  filter(timediff!=1)
+movementDF32
+
+#histogram for values without 1
+hist(movementDF32$timediff, breaks = 35)
+
+```
+
+
+```{r}
+#removing values of 2 from the df
+movementDF32
+movementDF32<-movementDF32%>%
+  filter(timediff>2)
+movementDF32
+
+#histogram for values without 1
+hist(movementDF32$timediff, breaks = 35)
+```
+
+```{r}
+#new DF for Spider 31
+#start time
+restToMove31<-MetWit%>%
+  select(Light, Monitor.1.Spider.31,Date.Time)%>%
+  filter(Monitor.1.Spider.31-lag(Monitor.1.Spider.31)>=1)%>%
+  rename(startTime=Date.Time)%>%
+  mutate(number=row_number())%>%
+  rename(startLight=Light)
+restToMove31
+
+#function that shows from Move to Rest ( the minute where there is no movement)
+#stop time
+moveToRest31<-MetWit%>%
+  select(Light, Monitor.1.Spider.31,Date.Time)%>%
+  filter(Monitor.1.Spider.31-lag(Monitor.1.Spider.31)<0)%>%
+  rename(stopTime=Date.Time)%>%
+  mutate(number=row_number())%>%
+  rename(stopLight=Light)
+moveToRest31
+
+#creating a new df with start and stop times using SQL
+movementDF31<-sqldf("SELECT startTime, stopTime FROM restToMove31 LEFT JOIN moveToRest31 USING(number)")
+movementDF31
+
+#calculating the time difference
+movementDF31$timediff<-difftime(movementDF31$stopTime,movementDF31$startTime)
+movementDF31
+
+#making the value numeric
+movementDF31$timediff<-as.numeric(movementDF31$timediff)
+
+#histogram
+hist(movementDF31$timediff, breaks = 35)
+
+#removing values of 1 from the df
+movementDF31<-movementDF31%>%
+  filter(timediff>1)
+movementDF31
+
+#histogram for values without 1
+hist(movementDF31$timediff, breaks = 35)
+
+#removing values of 2 from the df
+movementDF31<-movementDF31%>%
+  filter(timediff>2)
+movementDF31
+
+#histogram for values without 1
+hist(movementDF31$timediff, breaks = 35)
+```
+
+```{r}
+#new DF for Spider 30
+#start time
+restToMove30<-MetWit%>%
+  select(Light, Monitor.1.Spider.30,Date.Time)%>%
+  filter(Monitor.1.Spider.30-lag(Monitor.1.Spider.30)>=1)%>%
+  rename(startTime=Date.Time)%>%
+  mutate(number=row_number())%>%
+  rename(startLight=Light)
+restToMove30
+
+#function that shows from Move to Rest ( the minute where there is no movement)
+#stop time
+moveToRest30<-MetWit%>%
+  select(Light, Monitor.1.Spider.30,Date.Time)%>%
+  filter(Monitor.1.Spider.30-lag(Monitor.1.Spider.30)<0)%>%
+  rename(stopTime=Date.Time)%>%
+  mutate(number=row_number())%>%
+  rename(stopLight=Light)
+moveToRest30
+
+#creating a new df with start and stop times using SQL
+movementDF30<-sqldf("SELECT startTime, stopTime FROM restToMove30 LEFT JOIN moveToRest30 USING(number)")
+movementDF30
+
+#calculating the time difference
+movementDF30$timediff<-difftime(movementDF30$stopTime,movementDF30$startTime)
+movementDF30
+
+#making the value numeric
+movementDF30$timediff<-as.numeric(movementDF30$timediff)
+
+#histogram
+hist(movementDF30$timediff, breaks = 35)
+
+#removing values of 1 from the df
+movementDF30<-movementDF30%>%
+  filter(timediff>1)
+movementDF30
+
+#histogram for values without 1
+hist(movementDF30$timediff, breaks = 35)
+
+#removing values of 2 from the df
+movementDF30<-movementDF30%>%
+  filter(timediff>2)
+movementDF30
+
+#histogram for values without 1
+hist(movementDF30$timediff, breaks = 35)
+```
+
+#filter 1 and 2 sec events
+#figure out how to stitch certain events that we can consider as 1 long movement
+
+#run a spider simulatotion
+#try to create a best fit line (poisson(exp) or beta distribution)
+#fix the bidwidths 
+
+
+
+
