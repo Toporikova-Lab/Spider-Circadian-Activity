@@ -1,0 +1,109 @@
+---
+title: "Exponential Distribution"
+author: "Alice Chen"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+### Load Packages
+
+```{r}
+library(tidyverse)
+```
+
+### Load Data
+
+```{r}
+MetWit2DDmovement<-read.csv("MetWit2DDmovement.csv", header = TRUE)
+```
+
+### Merge Data 2DD
+
+```{r merge-data-2DD}
+#remove the X column that counts number of rows
+MetWit2DDmovement <- MetWit2DDmovement%>%
+  select(-X)
+
+
+#merge all columns into a single column
+joined_MetWit2DD <- data.frame(unlist(MetWit2DDmovement))
+
+joined_MetWit2DD <- joined_MetWit2DD%>%
+  rename(movements=unlist.MetWit2DDmovement.)
+
+#remove NA rows
+joined_MetWit2DD <- na.omit(joined_MetWit2DD)
+
+joined_MetWit2DD %>%
+  head(10)
+```
+
+```{r}
+count_movements2DD <- joined_MetWit2DD %>%
+  group_by(movements) %>%
+  count(movements) 
+
+count_movements2DD
+
+write.csv(count_movements2DD,"MetWit2DD_movement_lengths.csv")
+```
+
+
+
+
+
+
+```{r}
+theta.0 <- min(count_movements2DD$n) * 0.5
+
+model.0 <- lm(log(n - theta.0) ~ movements, data = count_movements2DD)
+
+alpha.0 <- exp(coef(model.0)[1])
+beta.0 <- coef(model.0)[2]
+
+# Starting parameters
+start <- list(alpha = alpha.0, beta = beta.0, theta = theta.0)
+start
+```
+
+
+```{r}
+model <- nls(n ~ alpha * exp(beta * movements) + theta , data = count_movements2DD, start = start)
+
+# Plot fitted curve
+plot(count_movements2DD$movements, count_movements2DD$n)
+lines(count_movements2DD$movements, predict(model, list(x = count_movements2DD$movements)), col = 'skyblue', lwd = 3)
+
+summary(model)
+
+```
+
+
+
+### Equation
+
+$30.243\cdot e^{-.063377x}+1.91$
+
+
+### Random Walk based on Equation
+
+```{r}
+require(ggplot2)
+
+#set.seed(2022) # for reproducibility
+n = 72 # length of random walk
+
+rand.walk = data.frame(
+  value = cumsum(sample(c(-1,1), size=n, replace=TRUE)),
+  n = 1:n
+)
+
+ggplot(rand.walk, aes(x=n, y=value)) + 
+  geom_line() + 
+  theme_minimal() +
+  labs(title = "Random Walk 72 Hours", x = "hours", y ="walk")
+```
+
+
