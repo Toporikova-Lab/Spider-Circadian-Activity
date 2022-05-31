@@ -1,1 +1,33 @@
+import pandas as pd
+df = pd.read_csv("Metazygia wittfeldae Monitor 1 activity.csv")
+df["Date_Time"] = pd.to_datetime(df.Date + ' ' + df.Time)
+df = df.set_index("Date_Time")
+print("Data Frame with DateTime Index")
+display(df)
 
+
+
+counts = df.Date.value_counts()
+usable = counts[counts == 1440]
+
+df = df[df.Date.isin(usable.index)]
+print("Complete Days Only Data Frame")
+display(df)
+
+
+
+df_s = df.copy()
+df_s["switch"] = df_s['lights'].diff()
+df_off = df_s[df_s['switch'] == -1].dropna()
+dd_time = df_off.Time[-1]
+dd_date = df_off.Date[-1]
+
+ld = df[df['Date'] <= dd_date]
+ld.to_csv("LD.csv")
+dd = df[df['Date'] > dd_date]
+dd.to_csv("DD.csv")
+print("LD Data Frame")
+display(ld.head())
+print("===========================================================================================")
+print("DD Data Frame")
+display(dd.head())
