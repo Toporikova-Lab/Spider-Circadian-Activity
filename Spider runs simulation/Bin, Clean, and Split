@@ -1,0 +1,76 @@
+
+file_names = "Metazygia wittfeldae Monitor 1 activity"
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn import preprocessing
+
+def importData(file_names):
+    df = pd.read_csv(file_names + '.csv')
+    df["Date_Time"] = pd.to_datetime(df.Date + ' ' + df.Time)
+    df = df.set_index("Date_Time")
+    print("Data Frame with DateTime Index")
+    display(df.head())
+    
+    total_days = df.Date.value_counts().shape[0]
+    print()
+    print("The experiment expanded over a total of", total_days, "days.")
+    
+importData(file_names)
+
+
+
+from sklearn.preprocessing import Binarizer
+bin = Binarizer()
+
+
+def binarizeData(df):
+    for x in df.columns[4:]:
+        col = df[x].values
+        col = col.reshape(-1, 1)
+        df[x] = bin.fit_transform(col)
+
+    df.to_csv("Metazygia wittfeldae Monitor 1 activity_LD_binary.csv")
+    display(df)
+    
+binarizeData(df)
+
+
+
+def deleteIncompleteDays(df):
+    mins_in_day = df.Date.value_counts()
+    complete_days = mins_in_day[mins_in_day == 24 * 60]
+    
+    df = df[df.Date.isin(complete_days.index)]
+    print("Complete Days Only Data Frame")
+    display(df.head())
+    print()
+    display(df.tail())
+    
+    total_complete_days = df.Date.value_counts().shape[0]
+    print()
+    print("The total amount of complete (24 hour) days conducted in the experiment is", total_complete_days, "days.")
+    
+deleteIncompleteDays(df)
+    
+    
+    
+def splitDF(df):
+    df_lightSwitch = df.copy()
+    df_lightSwitch["switch"] = df_lightSwitch['lights'].diff()
+    lights_turn_off = df_lightSwitch[df_lightSwitch['switch'] == -1].dropna()
+    LD_end_date = lights_turn_off.Date[-1]
+
+    LD = df[df['Date'] <= LD_end_date]
+    LD.to_csv(file_names + "_LD.csv")
+    DD = df[df['Date'] > LD_end_date]
+    DD.to_csv(file_names + "_DD.csv")
+    print("LD Data Frame")
+    display(LD.head())
+    print()
+    print("DD Data Frame")
+    display(DD.head())
+    
+splitDF(df)
