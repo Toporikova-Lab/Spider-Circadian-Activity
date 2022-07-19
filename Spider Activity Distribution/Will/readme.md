@@ -18,7 +18,12 @@
 ## Installation <a name="Installation"></a>
 ##### Installing Jupyter Notebook
   1. Navigate to the [Anaconda website](https://www.anaconda.com/products/distribution).
-  2. 
+  2. Download the correct distribution for your operating system.
+  3. Once downloaded, select Anaconda Navigator in your applications folder.
+  4. Select launch under the Jupyter Notebook symbol.
+  
+##### Using my Jupyter Notebook
+  1. Download the 
 ## Getting Started <a name="Getting_Started"></a>
 
 ## Usage <a name="Usage"></a>
