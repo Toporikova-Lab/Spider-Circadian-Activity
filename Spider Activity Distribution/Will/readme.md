@@ -6,7 +6,7 @@
 1. [Installation](#Installation)
 2. [Getting Started](#Getting Started)
 3. [Usage](#Usage)
-4. [Acknowledgements] (#Acknowledgements)
+4. [Acknowledgements](#Acknowledgements)
 ## Installation <a name="Installation"></a>
 
 ## Getting Started <a name="Getting Started"></a>
