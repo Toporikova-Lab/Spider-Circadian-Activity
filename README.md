@@ -13,7 +13,7 @@ However, spiders are different. Not only do they have differing biological clock
 
 ## Required Files
 
-
+A .csv file with columns for every spider labeled s1, s2, s3... etc. Rows are times and dates when data is recorded. Cells are filled with the number of times the spider moved by crossing an infrared beam. 
 
 ## Usage
 
