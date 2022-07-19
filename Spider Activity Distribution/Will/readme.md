@@ -30,12 +30,9 @@
 ##### Necessary Files
   1. A file containing activity data in light/dark conditions over multiple days
   2. File specifications:
-    
-    A. Must be in .csv format
-    
-    B. Must contain a light column in binary (Ex: 1 = Lights on, 0 = Lights off)
-    
-    C. DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss
+   A. Must be in .csv format
+   B. Must contain a light column in binary (Ex: 1 = Lights on, 0 = Lights off)
+   C. DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
   
   The file should look something like this:
