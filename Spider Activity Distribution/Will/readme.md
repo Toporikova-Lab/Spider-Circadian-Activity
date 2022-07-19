@@ -1,5 +1,7 @@
 # Analysis of Circadian Rhythm in Spiders through Activity Onset
-<img src="https://user-images.githubusercontent.com/106093318/179773433-b6740bc9-706b-4f93-8075-0b6da6695b31.png" width="800" height="400" />
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/106093318/179773433-b6740bc9-706b-4f93-8075-0b6da6695b31.png" width="800" height="400" />
+</p>
 
 ## About My Project
 
