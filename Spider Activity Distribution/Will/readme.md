@@ -23,7 +23,7 @@
   4. Select launch under the Jupyter Notebook symbol.
   
 ##### Using my Jupyter Notebook
-  1. Download the [Calculating Activity Onset] (https://github.com/Toporikova-Lab/Spider-Circadian-Activity/raw/main/Spider%20Activity%20Distribution/Will/Calculating%20Activity%20Onset%20Final%20Code.ipynb) file.
+  1. Download the [Calculating Activity Onset](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/raw/main/Spider%20Activity%20Distribution/Will/Calculating%20Activity%20Onset%20Final%20Code.ipynb) file.
   2. Upload it to your Jupyter Notebook.
 ## Getting Started <a name="Getting_Started"></a>
 
