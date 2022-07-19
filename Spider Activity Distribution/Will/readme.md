@@ -7,22 +7,11 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
     <li><a href="#Installation">Installation</a></li>
     <li><a href="#Getting-Started">Getting Started</a></li>
     <li><a href="#Usage">Usage</a></li>
     <li><a href="#Acknowledgements">Acknowledgements</a></li>
 </details>
-
-
-
-
-
-1. [Installation](#Installation)
-2. [Getting Started](#Getting_Started)
-3. [Usage](#Usage)
-4. [Acknowledgements](#Acknowledgements)
- </details>
 
 ## Installation <a name="Installation"></a>
 
