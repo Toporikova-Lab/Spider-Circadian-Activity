@@ -5,7 +5,6 @@
 
 ## About My Project
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -17,7 +16,9 @@
 </details>
 
 ## Installation <a name="Installation"></a>
-
+##### Installing Jupyter Notebook
+  1. Navigate to the [anaconda](https://www.anaconda.com/products/distribution) downloads website.
+  2. 
 ## Getting Started <a name="Getting_Started"></a>
 
 ## Usage <a name="Usage"></a>
