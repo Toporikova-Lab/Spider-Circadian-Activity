@@ -2,8 +2,8 @@
 
 ## About My Project
 
-</details>
-#### <summary> Table of contents <summary>
+</details open>
+#### <summary> Table of contents </summary>
  <br>
 1. [Installation](#Installation)
 2. [Getting Started](#Getting_Started)
