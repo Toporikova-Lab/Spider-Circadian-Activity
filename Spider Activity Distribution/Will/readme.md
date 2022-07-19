@@ -34,6 +34,7 @@
     B. Must contain a light column in binary (Ex: 1 = Lights on, 0 = Lights off)
     C. DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
+  
   The file should look something like this:
 <img width="1122" alt="Screen Shot 2022-07-19 at 2 22 14 PM" src="https://user-images.githubusercontent.com/106093318/179821764-3ffdfc18-f075-4c28-99bd-7f905280f6cb.png">
 
