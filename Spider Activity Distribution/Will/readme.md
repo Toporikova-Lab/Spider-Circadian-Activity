@@ -38,7 +38,7 @@
   *    Must be in .csv format
   *    Must contain a light column in binary (Ex: 1 = Lights on, 0 = Lights off)
   *    Must contain a column with DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss OR DateTime values of type pandas._libs.tslibs.timestamps.Timestamp
-  *    Must contain only datetime, light, and activity columns.
+  *    Must contain only datetime, light, and activity columns. Any other columns with cause problems with the code.
   
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
   
