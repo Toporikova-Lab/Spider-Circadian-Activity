@@ -1,11 +1,11 @@
 # Analysis of Circadian Rhythm in Spiders through Activity Onset
-<figure>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/106093318/180052222-47c1f831-58cb-4902-8a60-eb0a2b15ef9b.png" width="600" height="400" />
-<figcaption align = "center"><b>Allocyclosa Bifurca </b>
-</figcaption>
 </p>
-</figure>
+<p align = "center">
+Gasteracantha cancriformis
+</p>
+
 
 ## About My Project
   In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. Because previous research has shown a difference in free running period (FRP) across species, I was interested in analyzing if the same holds true for mean activity onset. We hypothesized that a species with a longer FRP would not be as ready to move when lights turn off as a spider with a short FRP, and therefore long FRP spiders would generally have a longer mean activity onset. 
