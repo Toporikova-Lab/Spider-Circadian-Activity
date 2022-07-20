@@ -2,7 +2,8 @@
 <figure>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/106093318/180052222-47c1f831-58cb-4902-8a60-eb0a2b15ef9b.png" width="600" height="400" />
-  <figcaption align = "center"><b>Allocyclosa Bifurca </b></figcaption>
+  <figcaption align = "center"><b>Allocyclosa Bifurca </b>
+  </figcaption>
 </p>
 </figure>
 
