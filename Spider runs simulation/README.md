@@ -23,6 +23,7 @@ All downloaded files should be located in the same folder/subfolder.
 
 ## Calculating Spider Run Duration
 
+
 To calculate how long a spider has been moving, we binarized the data and found the start and end indices of movement. By subtracting the start and end indices, we can get the duration of uninterrupted run. This new data is made into a new .csv file.
 
 ## Creating Normalized Histograms
