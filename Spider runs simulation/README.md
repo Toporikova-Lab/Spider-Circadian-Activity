@@ -18,7 +18,7 @@ The final goal is to be able to simulate an artificial spider's movements. Our f
 
 Below is an example of what the .csv file could look like:
 
-<img width="494" alt="Screen Shot 2022-07-22 at 10 16 07 AM" src="https://user-images.githubusercontent.com/67922568/180458344-f9b3f88d-b477-416b-aa1e-5417a946537f.png">
+<img width="475" alt="Screen Shot 2022-07-22 at 1 30 36 PM" src="https://user-images.githubusercontent.com/67922568/180493070-9f2ec4d8-cb4a-4343-9b69-ad7d9dd147c3.png">
 
 All Python code is written in Jupyter Notebook. To install:
   1. Navigate to the [Anaconda website](https://www.anaconda.com/products/distribution)
