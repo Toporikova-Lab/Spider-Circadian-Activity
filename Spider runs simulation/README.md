@@ -13,14 +13,16 @@ The goal is to be able to simulate a spider's movements.
 
 A .csv file of your data with columns for every spider labeled s1, s2, s3... etc. Rows are times and dates when data is recorded. Cells are filled with the number of times the spider moved by crossing an infrared beam. 
 
-All Python code is written in Jupyter Notebook.
+All Python code is written in Jupyter Notebook. To install:
+  1. Navigate to the [Anaconda website](https://www.anaconda.com/products/distribution)
+  2. Download the correct distribution for your operating system
+  3. Once downloaded, select Anaconda Navigator in your applications folder
+  4. Select launch under the Jupyter Notebook symbol
+  
+All downloaded files should be located in the same folder/subfolder.
 
 ## Calculating Spider Run Duration
 
 To calculate how long a spider has been moving, we binarized the data and found the start and end indices of movement. By subtracting the start and end indices, we can get the duration of uninterrupted run. This new data is made into a new .csv file.
-
-## Resampling Data
-
-We also resampled the data by finding the sum of movements in 2 minute intervals. This was done to reduce "noise."
 
 ## Creating Normalized Histograms
