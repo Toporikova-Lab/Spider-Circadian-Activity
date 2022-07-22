@@ -23,9 +23,9 @@ All files must be placed in the same folder/subfolder as the Jupyter Notebook do
 
 ## Calculating Spider Run Duration
 
-<img width="46" alt="Screen Shot 2022-07-22 at 9 33 59 AM" src="https://user-images.githubusercontent.com/67922568/180450129-7ec07599-ec4c-4765-899d-1c68f52f2bd5.png">
+[Binarized Data]<img width="41" alt="Screen Shot 2022-07-22 at 9 33 18 AM" src="https://user-images.githubusercontent.com/67922568/180450014-39c25460-42ca-4fb9-9b2f-00eaca6dd984.png">
 
-<img width="41" alt="Screen Shot 2022-07-22 at 9 33 18 AM" src="https://user-images.githubusercontent.com/67922568/180450014-39c25460-42ca-4fb9-9b2f-00eaca6dd984.png">
+<img width="46" alt="Screen Shot 2022-07-22 at 9 33 59 AM" src="https://user-images.githubusercontent.com/67922568/180450129-7ec07599-ec4c-4765-899d-1c68f52f2bd5.png">
 
 To calculate how long a spider has been moving, we binarized the data and found the start and end indices of movement. By subtracting the start and end indices, we can get the duration of uninterrupted run. This new data is made into a new .csv file.
 
