@@ -1,6 +1,6 @@
 # Spider Run Simulation
 
-The goal is to be able to simulate a spider's movements. Our first objective 
+The goal is to be able to simulate a spider's movements. Our first objective is to find run duration, which we define as a bout of uninterrupted movement. That is, when a spider moves with no stopping for a period of time. We then find the distribution of these run durations to visualize the counts of various run duration lengths using a histogram. 
 
 ## Table of Contents
 
@@ -26,5 +26,11 @@ All files must be placed in the same folder/subfolder as the Jupyter Notebook do
 Binarized Data <img width="64" alt="Screen Shot 2022-07-22 at 9 40 59 AM" src="https://user-images.githubusercontent.com/67922568/180451473-83b735c4-d976-48b0-bd84-493bea6fb846.png"> Run Duration Data <img width="46" alt="Screen Shot 2022-07-22 at 9 33 59 AM" src="https://user-images.githubusercontent.com/67922568/180450129-7ec07599-ec4c-4765-899d-1c68f52f2bd5.png">
 
 To calculate how long a spider has been moving, we binarized the data and found the start and end indices of movement. By subtracting the start and end indices, we can get the duration of uninterrupted run. This new data is made into a new .csv file.
+
+We have also resampled the data by finding the sum of every two rows and making that a new .csv file.
+
+<img width="157" alt="Screen Shot 2022-07-22 at 10 04 33 AM" src="https://user-images.githubusercontent.com/67922568/180456106-624c9501-5d8b-4062-8b18-93e777452920.png">
+
+Using this new file, we have also ran the same run duration code to investigate if there was any change in the distribution of run durations from resampling.
 
 ## Creating Normalized Histograms
