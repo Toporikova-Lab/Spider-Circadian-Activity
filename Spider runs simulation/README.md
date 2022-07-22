@@ -7,6 +7,7 @@ The goal is to be able to simulate an artificial spider's movements. Our first o
 - [Required Files](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#required-files)
 - [Calculating Spider Run Duration](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#calculating-spider-run-duration)
 - [Creating Normalized Histograms](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#creating-normalized-histograms)
+- [Usage]()
 
 ## Required Files
 
@@ -48,3 +49,6 @@ Using run duration data and resampled run duration data, we created a histogram 
 We also normalized both histograms to compare if the distributions differed after resampling.
 
 <img width="573" alt="Screen Shot 2022-07-22 at 10 32 19 AM" src="https://user-images.githubusercontent.com/67922568/180461677-1df6f653-d6a3-40ef-abd4-d8b371fc5512.png">
+
+## Usage
+
