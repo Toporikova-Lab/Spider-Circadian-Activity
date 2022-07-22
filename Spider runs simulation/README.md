@@ -11,7 +11,9 @@ The goal is to be able to simulate a spider's movements. Our first objective is 
 
 ## Required Files
 
-A .csv file of your data with columns for every spider labeled s1, s2, s3... etc. Rows are times and dates when data is recorded. Cells are filled with the number of times the spider moved by crossing an infrared beam. 
+A .csv file of your data with columns for every spider labeled s1, s2, s3... etc. Rows are times and dates when data is recorded. Cells are filled with the number of times the spider moved by crossing an infrared beam. Below is an example of how the .csv file could look like:
+
+<img width="494" alt="Screen Shot 2022-07-22 at 10 16 07 AM" src="https://user-images.githubusercontent.com/67922568/180458344-f9b3f88d-b477-416b-aa1e-5417a946537f.png">
 
 All Python code is written in Jupyter Notebook. To install:
   1. Navigate to the [Anaconda website](https://www.anaconda.com/products/distribution)
