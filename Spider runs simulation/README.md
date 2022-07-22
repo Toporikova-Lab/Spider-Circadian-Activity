@@ -11,7 +11,11 @@ The goal is to be able to simulate an artificial spider's movements. Our first o
 
 ## Required Files
 
-A .csv file of your data with columns for every spider labeled s1, s2, s3... etc. Rows are times and dates when data is recorded. Cells are filled with the number of times the spider moved by crossing an infrared beam. Must contain a column with DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss OR DateTime values of type pandas._libs.tslibs.timestamps.Timestamp. Below is an example of how the .csv file could look like:
+- A .csv file of your data with columns for every spider labeled s1, s2, s3... etc. 
+- Rows are times and dates when data is recorded. 
+- Cells are filled with the number of times the spider moved by crossing an infrared beam. 
+- Must contain a column with DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss OR DateTime values of type pandas._libs.tslibs.timestamps.Timestamp. 
+Below is an example of how the .csv file could look like:
 
 <img width="494" alt="Screen Shot 2022-07-22 at 10 16 07 AM" src="https://user-images.githubusercontent.com/67922568/180458344-f9b3f88d-b477-416b-aa1e-5417a946537f.png">
 
