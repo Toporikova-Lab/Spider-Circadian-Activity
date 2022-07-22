@@ -1,6 +1,6 @@
 # Spider Run Simulation
 
-The goal is to be able to simulate an artificial spider's movements. Our first objective is to find run duration, which we define as a bout of uninterrupted movement. That is, when a spider moves with no stopping for a period of time. We then find the distribution of these run durations to visualize the counts of various run duration lengths using a histogram. 
+The final goal is to be able to simulate an artificial spider's movements. Our first objective is to find run duration, which we define as a bout of uninterrupted movement; that is, when a spider moves with no stopping for a period of time. We then find the distribution of these run durations to visualize the counts of various run duration lengths using a histogram. 
 
 ## Table of Contents
 
