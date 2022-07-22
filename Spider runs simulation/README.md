@@ -1,6 +1,6 @@
 # Spider Run Simulation
 
-The goal is to be able to simulate a spider's movements. Our first objective is to find run duration, which we define as a bout of uninterrupted movement. That is, when a spider moves with no stopping for a period of time. We then find the distribution of these run durations to visualize the counts of various run duration lengths using a histogram. 
+The goal is to be able to simulate an artificial spider's movements. Our first objective is to find run duration, which we define as a bout of uninterrupted movement. That is, when a spider moves with no stopping for a period of time. We then find the distribution of these run durations to visualize the counts of various run duration lengths using a histogram. 
 
 ## Table of Contents
 
@@ -36,3 +36,11 @@ We have also resampled the data by finding the sum of every two rows and making 
 Using this new file, we have also ran the same run duration code to investigate if there was any change in the distribution of run durations from resampling.
 
 ## Creating Normalized Histograms
+
+Using run duration data and resampled run duration data, we created a histogram to visualize the distribution.
+
+<img width="573" alt="Screen Shot 2022-07-22 at 10 31 49 AM" src="https://user-images.githubusercontent.com/67922568/180461554-91dda34d-6656-43cb-908a-ad1282487db5.png">
+
+We also normalized both histograms to compare if the distributions differed after resampling.
+
+<img width="573" alt="Screen Shot 2022-07-22 at 10 32 19 AM" src="https://user-images.githubusercontent.com/67922568/180461677-1df6f653-d6a3-40ef-abd4-d8b371fc5512.png">
