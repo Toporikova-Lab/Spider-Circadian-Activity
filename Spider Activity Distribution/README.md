@@ -8,12 +8,11 @@
 
 
 ## About My Project
-  In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. We define activity onset as the first time every night where the spider exceeds the mean of activity. An example of 
+  While most organisms have internal clocks of around 24 hours to match the earth's day, spiders have been shown to have internal clocks that are anywhere from 15 to 30 hours. Because it has previously been shown that a clock that greatly differs from 24 hours can reduce fitness, it is our lab's intent to investigate how spiders are able to survive on earth. With the overarching goal of creating a model of spider activity to possibly tease out the biological mechanisms allowing altered clock spiders to thrive, I aim to determine the average time each species starts activity at night as an aspect of this model.
   
-  The purpose of this is to possibly determine species differences in the time it takes the species to begin movement every night.
-  In order to do this, we first must define the threshold for activity onset. We 
-  
-  Because previous research has shown a difference in free running period (FRP) across species, I was interested in analyzing if the same holds true for mean activity onset. We hypothesized that a species with a longer FRP would not be as ready to move when lights turn off as a spider with a short FRP, and therefore long FRP spiders would generally have a longer mean activity onset. 
+  In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
+  <img width="904" alt="Screen Shot 2022-07-25 at 10 18 27 AM" src="https://user-images.githubusercontent.com/106093318/180799186-e28f0639-3739-4937-9175-84d40bb9ecf7.png">
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -38,11 +37,12 @@
  
 ## Getting Started <a name="Getting_Started"></a>
 ##### Necessary Files
-  1. A file containing activity data in light/dark conditions over multiple days
+  1. A file containing activity data in 12:12 light/dark conditions over multiple days
   2. File specifications:
   *    Must be in .csv format
   *    Must contain a light column in binary (Ex: 1 = Lights on, 0 = Lights off)
   *    Must contain a column with DateTime-like values for each datapoint in the style YYYY-MM-DD hh:mm:ss OR DateTime values of type pandas._libs.tslibs.timestamps.Timestamp
+  *    Must contain multiple columns of activity data, with each column representing a single spider.
   *    Must contain only datetime, light, and activity columns. Any other columns will cause problems with the code.
   
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
