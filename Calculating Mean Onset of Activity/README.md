@@ -11,7 +11,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While most organisms have internal clocks of around 24 hours to match the earth's day, spiders have been shown to have internal clocks that are anywhere from 15 to 30 hours. Because it has previously been shown that a clock that greatly differs from 24 hours can reduce an organism's fitness, it is our lab's intent to investigate how spiders are able to survive on earth. With the overarching goal of creating a model of spider activity to possibly tease out the biological mechanisms allowing altered clock spiders to thrive, I aim to determine the average time each species starts activity at night as an aspect of this model.
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
-<img width="880" alt="Screen Shot 2022-07-25 at 2 17 44 PM" src="https://user-images.githubusercontent.com/106093318/180846427-022ac132-14db-462c-ac2b-e489b6052a9e.png">
+<img width="847" alt="Screen Shot 2022-07-25 at 2 18 20 PM" src="https://user-images.githubusercontent.com/106093318/180846535-4b73473b-af39-4061-80c7-1910995b4265.png">
+
 
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the above figure, the red dotted line represents the calculated activity onset. The area shaded in red represents the data used to calculate the first activity onset. Hopefully, with these calculations, we will be able to see a relationship between spider species and activity onset, and eventually use this data to create a model of spider activity.
