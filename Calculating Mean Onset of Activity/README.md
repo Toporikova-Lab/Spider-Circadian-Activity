@@ -53,7 +53,7 @@
   
   The file should look something like this:
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/106093318/180846913-342af985-f456-4099-9055-8fef7b78d23f.png" width="559" height="400" />
+  <img src="https://user-images.githubusercontent.com/106093318/180846913-342af985-f456-4099-9055-8fef7b78d23f.png" width="559" />
 </p>
 
 
