@@ -13,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
  <img width="1074" alt="Screen Shot 2022-07-25 at 10 25 27 AM" src="https://user-images.githubusercontent.com/106093318/180800679-157eeca7-99e1-4c68-ac85-ec9b5e976b7d.png">
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the above figure, the red dotted line represents the calculated activity onset. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the above figure, the red dotted line represents the calculated activity onset. The area shaded in red represents the data used to calculate the first activity onset. 
 
 
 <!-- TABLE OF CONTENTS -->
