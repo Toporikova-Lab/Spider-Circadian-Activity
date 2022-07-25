@@ -14,10 +14,8 @@
 <img width="847" alt="Screen Shot 2022-07-25 at 2 18 20 PM" src="https://user-images.githubusercontent.com/106093318/180846535-4b73473b-af39-4061-80c7-1910995b4265.png">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the above figure, the red dotted line represents the calculated activity onset. The area shaded in red represents the data used to calculate the first activity onset. Hopefully, with these calculations, we will be able to see a relationship between spider species and activity onset, and eventually use this data to create a model of spider activity.
-
 <br />
 <br /> 
-<br />
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -30,8 +28,6 @@
 </details>
 <br />
 <br /> 
-<br />
-<br />
 
 ## Installation <a name="Installation"></a>
 ##### Installing Jupyter Notebook
