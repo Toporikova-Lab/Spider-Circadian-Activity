@@ -60,6 +60,8 @@
 ## Usage <a name="Usage"></a>
   Upon opening my jupyter notebook, you should see this at the top of the document.
 <img width="1389" alt="Screen Shot 2022-07-25 at 12 16 55 PM" src="https://user-images.githubusercontent.com/106093318/180826889-4a3fb115-7a3b-4a6f-a3ee-857f9c07976f.png">
+  Step 1: Change the filename to the name of your activity file
+  Step 2: Determine what time you would like to consider too late for activity onset. I recommend 12:00AM as this has worked best with our data.
 
   
   
