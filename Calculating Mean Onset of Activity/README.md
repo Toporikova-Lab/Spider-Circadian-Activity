@@ -62,14 +62,19 @@
   Upon opening my jupyter notebook, you should see this at the top of the document.
 <img width="1389" alt="Screen Shot 2022-07-25 at 12 16 55 PM" src="https://user-images.githubusercontent.com/106093318/180826889-4a3fb115-7a3b-4a6f-a3ee-857f9c07976f.png">
   
-  Step 1: Change the filename to the name of your activity file
+  Step 1: Change the filename to the name of your activity file.
   
   Step 2: Determine what time you would like to consider too late for activity onset to be accurate. I recommend 12:00AM as this has worked best with our data.
   
   Step 3: Run all code cells. 
   
 ### Calculating Activity Onset:
+  Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The .csv file will be to saved to the location of your jupyter notebook. An example of what the output should look like is shown below. 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/106093318/180848734-f02c4ace-0b11-481a-a5d7-d07bf977b4a3.png" />
+</p>
   
+  NOTE: Depending on the defined value for activity onset to not be accurate, 'NaN' values may be in some of the cells. This is normal
 
   
   
