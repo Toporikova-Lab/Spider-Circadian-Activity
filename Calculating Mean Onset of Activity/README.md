@@ -52,6 +52,7 @@
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
   
   The file should look something like this:
+  
 <img width="559" alt="Screen Shot 2022-07-25 at 2 20 01 PM" src="https://user-images.githubusercontent.com/106093318/180846913-342af985-f456-4099-9055-8fef7b78d23f.png">
 
 
