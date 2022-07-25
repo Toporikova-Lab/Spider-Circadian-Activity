@@ -8,9 +8,9 @@
 
 
 ## About My Project
-  While most organisms have internal clocks of around 24 hours to match the earth's day, spiders have been shown to have internal clocks that are anywhere from 15 to 30 hours. Because it has previously been shown that a clock that greatly differs from 24 hours can reduce fitness, it is our lab's intent to investigate how spiders are able to survive on earth. With the overarching goal of creating a model of spider activity to possibly tease out the biological mechanisms allowing altered clock spiders to thrive, I aim to determine the average time each species starts activity at night as an aspect of this model.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While most organisms have internal clocks of around 24 hours to match the earth's day, spiders have been shown to have internal clocks that are anywhere from 15 to 30 hours. Because it has previously been shown that a clock that greatly differs from 24 hours can reduce fitness, it is our lab's intent to investigate how spiders are able to survive on earth. With the overarching goal of creating a model of spider activity to possibly tease out the biological mechanisms allowing altered clock spiders to thrive, I aim to determine the average time each species starts activity at night as an aspect of this model.
   
-  In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
   <img width="904" alt="Screen Shot 2022-07-25 at 10 18 27 AM" src="https://user-images.githubusercontent.com/106093318/180799186-e28f0639-3739-4937-9175-84d40bb9ecf7.png">
 
 
