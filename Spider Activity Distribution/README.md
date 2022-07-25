@@ -53,7 +53,9 @@
 <img width="1383" alt="Screen Shot 2022-07-20 at 2 20 57 PM" src="https://user-images.githubusercontent.com/106093318/180054569-d18dfa13-ef5d-45f1-9d62-f47d0dfce9ad.png">
 
 ## Usage <a name="Usage"></a>
-##### Getting Started 
+  Upon opening my jupyter notebook, you should see this at the top of the document.
+<img width="1407" alt="Screen Shot 2022-07-25 at 10 35 05 AM" src="https://user-images.githubusercontent.com/106093318/180802838-b31bfc07-ce3f-4d21-ba5a-fbc2989f7801.png">
+THe first step 
   
   
 ## Acknowledgements <a name="Acknowledgements"></a>
