@@ -50,7 +50,7 @@
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
   
   The file should look something like this:
-<img width="1389" alt="Screen Shot 2022-07-25 at 12 16 55 PM" src="https://user-images.githubusercontent.com/106093318/180826156-8f7884c6-d238-4381-85ba-68be55f19a96.png">
+<img width="1074" alt="Screen Shot 2022-07-25 at 10 25 27 AM" src="https://user-images.githubusercontent.com/106093318/180800679-157eeca7-99e1-4c68-ac85-ec9b5e976b7d.png">
 
 ## Usage <a name="Usage"></a>
   Upon opening my jupyter notebook, you should see this at the top of the document.
