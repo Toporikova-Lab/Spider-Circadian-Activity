@@ -8,7 +8,12 @@
 
 
 ## About My Project
-  In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. Because previous research has shown a difference in free running period (FRP) across species, I was interested in analyzing if the same holds true for mean activity onset. We hypothesized that a species with a longer FRP would not be as ready to move when lights turn off as a spider with a short FRP, and therefore long FRP spiders would generally have a longer mean activity onset. 
+  In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. We define activity onset as the first time every night where the spider exceeds the mean of activity. An example of 
+  
+  The purpose of this is to possibly determine species differences in the time it takes the species to begin movement every night.
+  In order to do this, we first must define the threshold for activity onset. We 
+  
+  Because previous research has shown a difference in free running period (FRP) across species, I was interested in analyzing if the same holds true for mean activity onset. We hypothesized that a species with a longer FRP would not be as ready to move when lights turn off as a spider with a short FRP, and therefore long FRP spiders would generally have a longer mean activity onset. 
 
 <!-- TABLE OF CONTENTS -->
 <details>
