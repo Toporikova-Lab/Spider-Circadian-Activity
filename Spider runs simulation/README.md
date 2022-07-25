@@ -36,9 +36,6 @@ To calculate how long a spider has been moving, we binarized the data and found 
 
 We have also resampled the data by finding the sum of every two rows and making that a new .csv file.
 
-<img width="157" alt="Screen Shot 2022-07-22 at 10 04 33 AM" src="https://user-images.githubusercontent.com/67922568/180456106-624c9501-5d8b-4062-8b18-93e777452920.png">
-
-Using this new file, we have also ran the same run duration code to investigate if there was any change in the distribution of run durations from resampling.
 
 ## Creating Normalized Histograms
 
