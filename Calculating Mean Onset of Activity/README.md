@@ -32,6 +32,7 @@
 <br /> 
 <br />
 <br />
+
 ## Installation <a name="Installation"></a>
 ##### Installing Jupyter Notebook
   1. Navigate to the [Anaconda website](https://www.anaconda.com/products/distribution)
