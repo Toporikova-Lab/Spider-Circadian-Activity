@@ -8,7 +8,7 @@
 
 
 ## About My Project
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While most organisms have internal clocks of around 24 hours to match the earth's day, spiders have been shown to have internal clocks that are anywhere from 15 to 30 hours. Because it has previously been shown that a clock that greatly differs from 24 hours can reduce fitness, it is our lab's intent to investigate how spiders are able to survive on earth. With the overarching goal of creating a model of spider activity to possibly tease out the biological mechanisms allowing altered clock spiders to thrive, I aim to determine the average time each species starts activity at night as an aspect of this model.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While most organisms have internal clocks of around 24 hours to match the earth's day, spiders have been shown to have internal clocks that are anywhere from 15 to 30 hours. Because it has previously been shown that a clock that greatly differs from 24 hours can reduce an organism's fitness, it is our lab's intent to investigate how spiders are able to survive on earth. With the overarching goal of creating a model of spider activity to possibly tease out the biological mechanisms allowing altered clock spiders to thrive, I aim to determine the average time each species starts activity at night as an aspect of this model.
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
  <img width="1074" alt="Screen Shot 2022-07-25 at 10 25 27 AM" src="https://user-images.githubusercontent.com/106093318/180800679-157eeca7-99e1-4c68-ac85-ec9b5e976b7d.png">
@@ -55,7 +55,7 @@
 ## Usage <a name="Usage"></a>
   Upon opening my jupyter notebook, you should see this at the top of the document.
 <img width="1407" alt="Screen Shot 2022-07-25 at 10 35 05 AM" src="https://user-images.githubusercontent.com/106093318/180802838-b31bfc07-ce3f-4d21-ba5a-fbc2989f7801.png">
-THe first step 
+In the first code cell, replace 'Metazygia wittfeldae Monitor 1 Updated_LD' with the name of your file. You must remove the .csv extension from the name, as this is built into the code. Once you have changed the file name, run the first code cell.
   
   
 ## Acknowledgements <a name="Acknowledgements"></a>
