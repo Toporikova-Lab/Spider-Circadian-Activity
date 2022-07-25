@@ -58,6 +58,8 @@
 
 
 ## Usage <a name="Usage"></a>
+<br />
+<br /> 
 ### To Begin:
   Upon opening my jupyter notebook, you should see this at the top of the document.
 <img width="1389" alt="Screen Shot 2022-07-25 at 12 16 55 PM" src="https://user-images.githubusercontent.com/106093318/180826889-4a3fb115-7a3b-4a6f-a3ee-857f9c07976f.png">
@@ -67,9 +69,10 @@
   Step 2: Determine what time you would like to consider too late for activity onset to be accurate. I recommend 12:00AM as this has worked best with our data.
   
   Step 3: Run all code cells. 
-  
-  
-  
+<br />
+<br /> 
+<br />
+<br />
 ### Calculating Activity Onset:
   Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The .csv file will be to saved to the location of your jupyter notebook. An example of what the output should look like is shown below. 
 <p align="center">
@@ -81,8 +84,7 @@
 <br /> 
 <br />
 <br />
-<br />
-<br />
+
 ### Visualizing Activity Onset in Raster Plots
   In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. 
 <p align="center">
