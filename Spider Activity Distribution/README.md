@@ -50,12 +50,12 @@
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
   
   The file should look something like this:
-<img width="1383" alt="Screen Shot 2022-07-20 at 2 20 57 PM" src="https://user-images.githubusercontent.com/106093318/180054569-d18dfa13-ef5d-45f1-9d62-f47d0dfce9ad.png">
+<img width="1389" alt="Screen Shot 2022-07-25 at 12 16 55 PM" src="https://user-images.githubusercontent.com/106093318/180826156-8f7884c6-d238-4381-85ba-68be55f19a96.png">
 
 ## Usage <a name="Usage"></a>
   Upon opening my jupyter notebook, you should see this at the top of the document.
-<img width="1407" alt="Screen Shot 2022-07-25 at 10 35 05 AM" src="https://user-images.githubusercontent.com/106093318/180802838-b31bfc07-ce3f-4d21-ba5a-fbc2989f7801.png">
-In the first code cell, replace 'Metazygia wittfeldae Monitor 1 Updated_LD' with the name of your file. You must remove the .csv extension from the name, as this is built into the code. Once you have changed the file name, run the first code cell.
+
+
   
   
 ## Acknowledgements <a name="Acknowledgements"></a>
