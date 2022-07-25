@@ -15,8 +15,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the above figure, the red dotted line represents the calculated activity onset. The area shaded in red represents the data used to calculate the first activity onset. Hopefully, with these calculations, we will be able to see a relationship between spider species and activity onset, and eventually use this data to create a model of spider activity.
 
-
-
+<br />
+<br /> 
+<br />
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -27,7 +28,10 @@
     <li><a href="#Usage">Usage</a></li>
     <li><a href="#Acknowledgements">Acknowledgements</a></li>
 </details>
-
+<br />
+<br /> 
+<br />
+<br />
 ## Installation <a name="Installation"></a>
 ##### Installing Jupyter Notebook
   1. Navigate to the [Anaconda website](https://www.anaconda.com/products/distribution)
@@ -58,8 +62,8 @@
 
 
 ## Usage <a name="Usage"></a>
-<br />
-<br /> 
+
+  
 ### To Begin:
   Upon opening my jupyter notebook, you should see this at the top of the document.
 <img width="1389" alt="Screen Shot 2022-07-25 at 12 16 55 PM" src="https://user-images.githubusercontent.com/106093318/180826889-4a3fb115-7a3b-4a6f-a3ee-857f9c07976f.png">
