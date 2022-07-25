@@ -42,14 +42,10 @@ Using this new file, we have also ran the same run duration code to investigate 
 
 ## Creating Normalized Histograms
 
-Using run duration data and resampled run duration data, we created a histogram to visualize the distribution.
+Using run duration data and resampled run duration data, we created a histogram to visualize the distribution. The histograms were normalized, meaning that the area under the histogram is equal to 1 and the frequencies of run duration counts are relative to each other. 
 
-<img width="573" alt="Screen Shot 2022-07-22 at 10 31 49 AM" src="https://user-images.githubusercontent.com/67922568/180461554-91dda34d-6656-43cb-908a-ad1282487db5.png">
-
-We also normalized both histograms to compare if the distributions differed after resampling.
-
-<img width="573" alt="Screen Shot 2022-07-22 at 10 32 19 AM" src="https://user-images.githubusercontent.com/67922568/180461677-1df6f653-d6a3-40ef-abd4-d8b371fc5512.png">
+<img width="221" alt="Screen Shot 2022-07-25 at 9 21 59 AM" src="https://user-images.githubusercontent.com/67922568/180787371-933d4aee-5a3a-4978-b6c5-8894177c4863.png">
 
 ## Usage
 
-For those who want to visualize and investigate the duration of movement through histograms. 
+For those who want to visualize and investigate the duration of movement through histograms.
