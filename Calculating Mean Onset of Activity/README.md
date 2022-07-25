@@ -68,6 +68,8 @@
   
   Step 3: Run all code cells. 
   
+  
+  
 ### Calculating Activity Onset:
   Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The .csv file will be to saved to the location of your jupyter notebook. An example of what the output should look like is shown below. 
 <p align="center">
@@ -75,6 +77,8 @@
 </p>
   
   NOTE: Depending on the defined time for accurate activity onset, 'NaN' values may be in some of the cells. This is expected. 
+  
+  
   
 ### Visualizing Activity Onset in Raster Plots
   
