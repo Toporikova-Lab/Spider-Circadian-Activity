@@ -13,9 +13,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this project, I aim to analyze the average onset of activity every night for multiple days across multiple spiders. I define "activity onset" as being the first time each night where the mean of the individual's nightly activity is crossed. An example of a graph showing activity onsets is shown below. 
 <img width="847" alt="Screen Shot 2022-07-25 at 2 18 20 PM" src="https://user-images.githubusercontent.com/106093318/180846535-4b73473b-af39-4061-80c7-1910995b4265.png">
 
-
- 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the above figure, the red dotted line represents the calculated activity onset. The area shaded in red represents the data used to calculate the first activity onset. Hopefully, with these calculations, we will be able to see a relationship between spider species and activity onset, and eventually use this data to create a model of spider activity.
+
+
 
 
 <!-- TABLE OF CONTENTS -->
@@ -52,7 +52,8 @@
   3. This file must be placed in the same folder/subfolder as the Jupyter Notebook document
   
   The file should look something like this:
-<img width="1074" alt="Screen Shot 2022-07-25 at 10 25 27 AM" src="https://user-images.githubusercontent.com/106093318/180800679-157eeca7-99e1-4c68-ac85-ec9b5e976b7d.png">
+<img width="559" alt="Screen Shot 2022-07-25 at 2 20 01 PM" src="https://user-images.githubusercontent.com/106093318/180846913-342af985-f456-4099-9055-8fef7b78d23f.png">
+
 
 ## Usage <a name="Usage"></a>
   Upon opening my jupyter notebook, you should see this at the top of the document.
