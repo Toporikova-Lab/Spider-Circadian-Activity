@@ -79,7 +79,10 @@
   NOTE: Depending on the defined time for accurate activity onset, 'NaN' values may be in some of the cells. This is expected. 
 <br />
 <br /> 
-  
+<br />
+<br />
+<br />
+<br />
 ### Visualizing Activity Onset in Raster Plots
   In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. 
 <p align="center">
