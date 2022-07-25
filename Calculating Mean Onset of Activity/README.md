@@ -74,7 +74,10 @@
   <img src="https://user-images.githubusercontent.com/106093318/180848734-f02c4ace-0b11-481a-a5d7-d07bf977b4a3.png" />
 </p>
   
-  NOTE: Depending on the defined value for activity onset to not be accurate, 'NaN' values may be in some of the cells. This is normal
+  NOTE: Depending on the defined time for accurate activity onset, 'NaN' values may be in some of the cells. This is expected. 
+  
+### Visualizing Activity Onset in Raster Plots
+  
 
   
   
