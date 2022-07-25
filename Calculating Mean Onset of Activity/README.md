@@ -82,9 +82,9 @@
   
 ### Visualizing Activity Onset in Raster Plots
   In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. 
- 
- <img width="593" alt="Screen Shot 2022-07-25 at 2 36 50 PM" src="https://user-images.githubusercontent.com/106093318/180849840-183b0bdf-8970-4c27-a7a0-f2ad806dfc10.png">
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/106093318/180849840-183b0bdf-8970-4c27-a7a0-f2ad806dfc10.png" />
+</p>
   NOTE: If the activity threshold was not crossed, or if it was crossed after the defined threshold time, no activity onset will be plotted on the figure (For example, the second day for this individual).
 
   
