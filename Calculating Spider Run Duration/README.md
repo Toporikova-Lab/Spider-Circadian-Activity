@@ -2,6 +2,9 @@
 
 The objective is to find run duration, which we define as a bout of uninterrupted movement; that is, when a spider moves with no stopping for a period of time. We then find the distribution of these run durations to visualize the counts of various run duration lengths using a histogram. 
 
+<img width="384" alt="Screen Shot 2022-07-27 at 12 01 58 PM" src="https://user-images.githubusercontent.com/67922568/181294762-613a510b-e7d1-492c-af42-9d28a808b365.png">
+The red box represents run duration.
+
 ## Table of Contents
 
 - [Required Files](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#required-files)
