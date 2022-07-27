@@ -81,6 +81,7 @@
 </p>
   
   NOTE: Depending on the defined time for accurate activity onset, 'NaN' values may be in some of the cells. This is expected. 
+  
   NOTE: The values in each of the cells represents activity onset in the number of minutes after the lights turn off. This is done to normalize data between datasets that might have different lights on/off times.
 <br />
 <br /> 
