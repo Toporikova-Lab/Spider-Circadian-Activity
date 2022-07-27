@@ -75,7 +75,7 @@
 <br />
 <br />
 ### Calculating Activity Onset:
-  Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The threshold for each activity onset is defined in the code as the first time the mean of activity for the night is crossed after the lights turn off. This threshold can be manipulated to include standard deviation or SEM if you would like. The .csv file will be to saved to the location of your jupyter notebook. An example of what the output should look like is shown below.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The threshold for each activity onset is defined in the code as the first time the mean of activity for the night is crossed after the lights turn off. This threshold can be manipulated to include standard deviation or SEM if you would like. The .csv file will be to saved to the location of your jupyter notebook. An example of what the output should look like is shown below.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/106093318/180848734-f02c4ace-0b11-481a-a5d7-d07bf977b4a3.png" />
 </p>
@@ -89,7 +89,7 @@
 <br />
 
 ### Visualizing Activity Onset in Raster Plots
-  In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. It is important to validate the accuracy of every activity onset calculation using the raster plots, as there may be situations where the filters in the code may miss certain anomalies 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. It is important to validate the accuracy of every activity onset calculation using the raster plots, as there may be situations where the filters in the code may miss certain anomalies. 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/106093318/180849840-183b0bdf-8970-4c27-a7a0-f2ad806dfc10.png" width="500" height="600" />
 </p>
