@@ -4,7 +4,7 @@ The bjective is to find run duration, which we define as a bout of uninterrupted
 
 ## Table of Contents
 
-- [Required Files](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#required-files)
+- [Required Files](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#required-files)
 - [Calculating Spider Run Duration](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#calculating-spider-run-duration)
 - [Creating Normalized Histograms](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#creating-normalized-histograms)
 - [Usage](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Spider%20runs%20simulation/README.md#usage)
