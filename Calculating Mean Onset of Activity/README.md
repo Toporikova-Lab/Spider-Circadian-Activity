@@ -89,7 +89,7 @@
 <br />
 
 ### Visualizing Activity Onset in Raster Plots
-  In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. 
+  In the final code cell, the output should be multiple raster plots, depending on the number of spiders being analyzed. Each figure will be saved separately in the same location as your jupyter notebook. The figures should look similar to the image shown below. It is important to validate the accuracy of every activity onset calculation using the raster plots, as there may be situations where the filters in the code may miss certain anomalies 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/106093318/180849840-183b0bdf-8970-4c27-a7a0-f2ad806dfc10.png" width="500" height="600" />
 </p>
