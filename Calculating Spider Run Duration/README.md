@@ -5,7 +5,10 @@ The objective is to find run duration, which we define as a bout of uninterrupte
 <p align="center">
 <img width="384" alt="Screen Shot 2022-07-27 at 12 01 58 PM" src="https://user-images.githubusercontent.com/67922568/181294762-613a510b-e7d1-492c-af42-9d28a808b365.png">
 <p>
+  
+<p align="center">
 <img width="145" alt="Screen Shot 2022-07-27 at 12 04 03 PM" src="https://user-images.githubusercontent.com/67922568/181295212-63196074-069b-44f2-a077-650ec7b98a5b.png">
+<p>
 
 The red box represents run duration.
 
