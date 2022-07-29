@@ -10,7 +10,7 @@ The objective is to find run duration, which we define as a bout of uninterrupte
 
 <p align = "center">
 
-The red box represents run duration.
+<em>The red box represents run duration.<\em>
 
 <p>
 
