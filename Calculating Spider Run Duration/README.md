@@ -6,13 +6,13 @@ The objective is to find run duration, which we define as a bout of uninterrupte
 
 <img width="550" alt="Screen Shot 2022-07-29 at 9 35 38 AM" src="https://user-images.githubusercontent.com/67922568/181771742-8259148e-cf8f-4ffc-bebe-9b7700d3e1de.png">
 
-<\p>
+</p>
 
 <p align = "center">
 
-  <em>The red box represents run duration.</em>
+The red box represents run duration.
 
-<\p>
+</p>
 
 ## Table of Contents
 
