@@ -101,3 +101,18 @@
   
   
 ## Acknowledgements <a name="Acknowledgements"></a>
+  Dr. Natalia Toporikova
+  
+  Dr. Nadia Ayoub
+  
+  Bami Getachew
+  
+  Cassandra Sobieski
+  
+  Washington and Lee Biology Department
+  
+  Washington and Lee Computer Science Department
+  
+  Dr. Darrell Moore and Dr. Thomas C. Jones at Eastern Tenessee State University
+  
+  Summer Research Scholars Program
