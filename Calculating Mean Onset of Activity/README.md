@@ -40,7 +40,7 @@
   1. Download the Calculating Activity Onset Final Code file
   2. Upload it to your Jupyter Notebook
  
-## Getting Started <a name="Getting_Started"></a>
+## Getting Started <a name="Getting-Started"></a>
 ##### Necessary Files
   1. A file containing activity data in 12:12 light/dark conditions over multiple days
   2. File specifications:
