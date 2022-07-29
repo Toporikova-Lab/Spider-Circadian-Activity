@@ -78,7 +78,7 @@
 <br />
 <br />
 ### Calculating Activity Onset:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The threshold for each activity onset is defined in the code as the first time the mean of activity for the night is crossed after the lights turn off. This threshold can be manipulated to include standard deviation or SEM if you would like. The .csv file will be to saved to the location of your jupyter notebook. An example of what the output should look like is shown below.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once all code cells are run, the last two cells should produce an output. The second to last code cell should produce a .csv file containing the daily activity onset values for each spider. The threshold for each activity onset is defined in the code as the first time the mean of activity for the night is crossed after the lights turn off. This threshold can be manipulated to include standard deviation or SEM if you would like. The .csv file will be saved to the location of your jupyter notebook. An example of what the output should look like is shown below.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/106093318/180848734-f02c4ace-0b11-481a-a5d7-d07bf977b4a3.png" />
 </p>
