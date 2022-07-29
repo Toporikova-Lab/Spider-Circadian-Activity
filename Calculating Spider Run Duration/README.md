@@ -8,7 +8,8 @@ The objective is to find run duration, which we define as a bout of uninterrupte
 
 </p>
 
-<div style="text-align: center"> The red box represents run duration. </div>
+<div style="text-align: center">The red box represents run duration.</div>
+<p align = "center">The red box represents run duration.</p>
 
 ## Table of Contents
 
