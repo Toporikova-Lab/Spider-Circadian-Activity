@@ -13,9 +13,9 @@ The objective is to find run duration, which we define as a bout of uninterrupte
 ## Table of Contents
 
 - [Required Files](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#required-files)
+- [Usage](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#usage)
 - [Calculating Spider Run Duration](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#calculating-spider-run-duration)
 - [Creating Normalized Histograms](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#creating-normalized-histograms)
-- [Usage](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/tree/main/Calculating%20Spider%20Run%20Duration#usage)
 
 ## Required Files
 
@@ -41,20 +41,12 @@ All files must be placed in the same folder/subfolder as the Jupyter Notebook do
   
 ### To Begin:
   Upon opening my jupyter notebook, you should see this at the top of the document.
-<img width="1015" alt="Screen Shot 2022-07-29 at 10 44 02 AM" src="https://user-images.githubusercontent.com/106093318/181785421-1b02eb0d-aab7-46e5-a469-352b8e25eed6.png">
+<img width="812" alt="Screen Shot 2022-08-01 at 9 47 31 AM" src="https://user-images.githubusercontent.com/106606593/182162896-b5453962-4995-4c32-8764-2b8d7d8920c4.png">
 
   
-  Step 1: Change the filename to the name of your activity file.
+  Step 1: Change the filename to the name of your desired activity file.
   
-  Step 2: Determine what time you would like to consider too late for activity onset to be accurate. I recommend 12:00AM as this has worked best with our data.
-  
-  Step 3: Determine the fraction of average nightly activity that will be considered 'noise' activity. To do this, you may have to run the code multiple times with different fractions to see what works best with your data.
-  
-  Step 4: Run all following code cells. 
-<br />
-<br /> 
-<br />
-<br />
+  Step 2: Run cell (*make sure to run this cell first or the other functions will not work*)
 
 ## Calculating Spider Run Duration
 
@@ -69,7 +61,3 @@ To calculate how long a spider has been moving, we binarized the data and found 
 Using run duration data and resampled run duration data, we created a histogram to visualize the distribution. The histograms were normalized, meaning that the area under the histogram is equal to 1 and the frequencies of run duration counts are relative to each other. 
 
 <img width="221" alt="Screen Shot 2022-07-25 at 9 21 59 AM" src="https://user-images.githubusercontent.com/67922568/180787371-933d4aee-5a3a-4978-b6c5-8894177c4863.png">
-
-## Usage
-
-For those who want to visualize and investigate the duration of movement through histograms.
