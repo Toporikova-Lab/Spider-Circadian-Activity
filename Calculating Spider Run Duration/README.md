@@ -36,6 +36,26 @@ All Python code is written in Jupyter Notebook. To install:
   
 All files must be placed in the same folder/subfolder as the Jupyter Notebook document
 
+## Usage <a name="Usage"></a>
+
+  
+### To Begin:
+  Upon opening my jupyter notebook, you should see this at the top of the document.
+<img width="1015" alt="Screen Shot 2022-07-29 at 10 44 02 AM" src="https://user-images.githubusercontent.com/106093318/181785421-1b02eb0d-aab7-46e5-a469-352b8e25eed6.png">
+
+  
+  Step 1: Change the filename to the name of your activity file.
+  
+  Step 2: Determine what time you would like to consider too late for activity onset to be accurate. I recommend 12:00AM as this has worked best with our data.
+  
+  Step 3: Determine the fraction of average nightly activity that will be considered 'noise' activity. To do this, you may have to run the code multiple times with different fractions to see what works best with your data.
+  
+  Step 4: Run all following code cells. 
+<br />
+<br /> 
+<br />
+<br />
+
 ## Calculating Spider Run Duration
 
 To calculate how long a spider has been moving, we binarized the data and found the start and end indices of movement. By subtracting the start and end indices, we can get the duration of uninterrupted run. This new data is made into a new .csv file.
