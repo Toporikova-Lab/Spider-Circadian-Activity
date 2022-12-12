@@ -15,7 +15,6 @@ In this project, we use circular statistics to analyze the circadian rhythm in s
     - Must contain multiple columns of activity data where each column represents a single spider and the first row should clearly indicates the spider index (e.g. s1, s2, and s3)
     - Data file must be placed under the same folder as the Jupyter Notebook document
 
-
 ## Usage
 
 + **Step 1:** Open the `LS_Period` Jupyter Notebook and modify the datafile base according to your activity files for LD and DD period.  
@@ -42,3 +41,25 @@ In this project, we use circular statistics to analyze the circadian rhythm in s
     + `Para_DD_Stats.csv`: output file of `LS_Period.ipynb` containing the circadian period for each spider in DD period and corresponding p-value. 
     + `Mean_Para_LD.csv`: output file of `Circular_Statistics.ipynb` containing the resulting mean direction and mean length for each spider in LD period.  
     + `Mean_Para_DD.csv`: output file of `Circular_Statistics.ipynb` containing the resulting mean direction and mean length for each spider in DD period.  
+    
+
+# Circular Analysis
+
+After calculating circular statistics for several species, we can do some circular analysis based on the circular statistics we have for these species. In our analysis, we have circular statistics for four spider species--P. tepidariorum, L. mactans, A. studiosus and M. wittfeldae. We analyze the distribution of their circular stats through creating different graphs--circular plot, boxplot, ECDF (empirical cumulative distribution function), and histogram, and performing t-test and bootstrapping for the stats.
+
+## Usage
+
++ **Step 1:** Open the `Circular_Analysis` Jupyter Notebook and modify the list containing circular stats (mean length and mean direction) for LD and DD period for each species.  
++ **Step 2:** Run all the code cells in `Circular_Analysis` and images containing different graphs would be generated and saved under the same directory as the Jupyter Notebook. The result of t-test and bootstrapping for confidence interval would be generated inside the Jupyter Notebook.  
+
+## Documentation
+
+1. Jupyter Notebook
+    + `Circular_Analysis.ipynb`: Jupyter Notebook document performing circular analysis including generating graphs (circular plot, boxplot, ECDF, and histogram) and doing t-test and bootstrapping.  
+    
+2. Output files
+    + `CircularPlot_4species.png`: output file of `Circular_Analysis.ipynb` containing the picture of circular plot for the four species  
+    + `Boxplot_4species_angle.png`: output file of `Circular_Analysis.ipynb` containing the picture of boxplot of the distribution of mean direction in LD and DD period for the four species  
+    + `Boxplot_4species_length.png`: output file of `Circular_Analysis.ipynb` containing the picture of boxplot of the distribution of mean length in LD and DD period for the four species  
+    + `ECDF_4species.png`: output file of `Circular_Analysis.ipynb` containing the picture of ECDF of mean direction for the four species  
+    + `Histogram_4species.png`: output file of `Circular_Analysis.ipynb` containing the picture of histogram of mean direction for the four species  
