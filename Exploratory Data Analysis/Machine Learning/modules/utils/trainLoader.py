@@ -77,12 +77,12 @@ def crunchData(tar, pat, interval):
         #print(splitT, splitP)
     return np.array(newTar), np.array(newPat)
     
-def main():
+def loadData(timeInterval, dataPack='trainData'):
     # get the list of data 
-    dataPack = grabDataFiles('trainData')
+    dataPack = grabDataFiles(dataPack)
     
     # for each data matrix
-    dataChunks = []
+    ts, ps = [], []
     for datafile in dataPack:
         
         # get the list of target outputs
@@ -92,21 +92,21 @@ def main():
         newP = padWithZero(datafile)
     
         # use summation to crunch the minute-length intervals to hours (60) or days (1440)
-        tCrunch, pCrunch = crunchData(deathTimes, newP, interval=60)
+        tCrunch, pCrunch = crunchData(deathTimes, newP, interval=timeInterval)
         
         # squash the activity values to 0 or not-0
         sqsh = np.where(pCrunch > 0, 1, 0)
         
-        tp = list(zip(tCrunch, sqsh))
-        dataChunks.append(tp)
+        ts.append(tCrunch)
+        ps.append(sqsh)
                 
     # concatenate data (only applicable when there are multiple files in the directory)
-    if len(dataChunks) > 1:
-        data = []
-        for chunk in dataChunks:
-            for pattern in chunk:
-                data.append(pattern)
-        data = np.array(data)
+    if len(ts) > 1:
+        t, p = [], []
+        for i in range(len(ts)):
+            for j in range(len(ts[i])):
+                t.append(ts[i][j])
+                p.append(ps[i][j])
+        return np.array(t), np.array(p)
     else:
-        data = np.array(dataChunks[0])
-    print(data.shape)
+        return np.array(ts[0]), np.array(ps[0])
