@@ -19,7 +19,7 @@ p = Perceptron(h=5, i=216, o=1)
 
 # use the built in training function to train
 # I built it
-p.train(I, T, neps=10000, eta=0.01, mew=0.05)
+p.train(I, T, neps=20000, eta=0.005, mew=0.05)
 
 # save the results
 savedir = 'modules{0}saves{0}'.format(os.sep)
