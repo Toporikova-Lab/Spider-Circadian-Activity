@@ -64,7 +64,7 @@ class Perceptron():
     def dSquash(self, net): # I HAVE NO CLUE WHAT I AM DOING HERE
        return self.squash(net) * (1-self.squash(net))
     
-    def train(self, I, T, neps=1000, eta=0.05, mew=0):
+    def train(self, I, T, neps=1000, eta=0.05, mew=0.02):
         #previous weight changes for momentum
         DwHOprev, DwIHprev = 0, 0
         
@@ -126,7 +126,7 @@ class Perceptron():
     def save(self, ih='inputHidden.npy', ho='hiddenOutput.npy'):
         np.save(ih, self.wih, allow_pickle=True)
         np.save(ho, self.who, allow_pickle=True)
-        print('files saved to', os.getcwd())
+        print('files saved to', os.getcwd()+os.sep+ih)
     
     def load(self, ih='inputHidden.npy', ho='hiddenOutput.npy'):
         self.wih = np.load(ih, allow_pickle=True)

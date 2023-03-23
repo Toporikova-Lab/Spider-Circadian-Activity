@@ -14,11 +14,10 @@ def grabDataFiles(dir='trainData'):
     """
     data_path = os.path.abspath(os.curdir) + '{0}{1}{0}'.format(os.sep, dir)
     print('Path:', data_path)
-    os.chdir(data_path)
     
     dataPack = []
-    for filename in os.listdir():
-        df = pd.read_csv(filename, header=0, index_col=0)
+    for filename in os.listdir(data_path):
+        df = pd.read_csv(data_path+os.sep+filename, header=0, index_col=0)
         df.reset_index(drop=True, inplace=True)
         df.drop(labels='Light', axis=1, inplace=True)
         df.columns = [i for i in range(df.shape[1])]
