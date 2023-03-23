@@ -1,13 +1,14 @@
-from modules.utils.backprop import Perceptron
+from modules.utils.backprop import Perceptron, section
 from modules.utils.trainLoader import loadData
 import os
 import numpy as np
+import pandas as pd
 
 # load testing data
 T, I = loadData(60, 'testData')
 
 # 1 means alive, 0 means dead
-T = np.where(T == 215, 1, 0)
+T1 = np.where(T == 215, 1, 0)
 
 #dummy class, for data to be loaded into
 p = Perceptron(h = 0, i = 0, o = 0)
@@ -20,32 +21,34 @@ p.load(ih = savedir+'ihShallow.npy', ho = savedir+'hoShallow.npy')
 fpos, fneg = 0, 0
 pos, neg = 0, 0
 ncorrect = 0
+outs = []
 for i in range(len(I)):
     
     # get the output
     o = list(p.test(I[i]))[0]
     
     """
-    line-by-line printouts. ignore.
+    line-by-line data collection
     """
-    # ot = 'Yes' if o[0] > .5 else 'No'
-    # t = 'Yes' if T[i] == 1 else 'No'
-    # print target vs. actual
-    # print('Spider #' + str(i+1), 'Did it survive? '+ t + '. Do we think it survived? ' + ot, 'Literal output', o)
+    # target vs. actual
+    outs.append([T[i], o])
     
-    threshold = .5
-    if T[i] == 1: #spider alive
+    threshold = .15
+    if T1[i] == 1: #spider alive
         neg += 1
         if o > threshold:
             ncorrect += 1
         else:
             fpos += 1
-    elif T[i] == 0:
+    elif T1[i] == 0:
         pos += 1
         if o <= threshold:
             ncorrect += 1
         else:
             fneg += 1
-
+df = pd.DataFrame(data=outs, columns=['Time of death', 'MLP Output'])
+print('\n',section('Shallow Perceptron'))
+print('Threshold: outputs >', threshold, 'are considered "alive"')
 print('False Positives:', str(fpos)+'/'+str(neg), 'False Negatives:', str(fneg)+'/'+str(pos))
-print('Total Accuracy:', str(100*ncorrect/len(T)) + '%')
+print('Total Accuracy:', str(100*ncorrect/len(T1)) + '%')
+print(df)
