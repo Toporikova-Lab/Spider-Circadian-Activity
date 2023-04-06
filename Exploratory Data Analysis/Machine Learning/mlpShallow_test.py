@@ -23,30 +23,31 @@ pos, neg = 0, 0
 ncorrect = 0
 outs = []
 for i in range(len(I)):
-    
-    # get the output
-    o = list(p.test(I[i]))[0]
-    
-    """
-    line-by-line data collection
-    """
-    # target vs. actual
-    outs.append([T[i], o])
-    
-    threshold = .15
-    if T1[i] == 1: #spider alive
-        neg += 1
-        if o > threshold:
-            ncorrect += 1
-        else:
-            fpos += 1
-    elif T1[i] == 0:
-        pos += 1
-        if o <= threshold:
-            ncorrect += 1
-        else:
-            fneg += 1
-df = pd.DataFrame(data=outs, columns=['Time of death', 'MLP Output'])
+	
+	# get the output
+	o = list(p.test(I[i]))[0]
+	
+	"""
+	line-by-line data collection
+	"""
+	
+	threshold = .15
+	if T1[i] == 1: #spider alive
+		neg += 1
+		if o > threshold:
+			ncorrect += 1
+		else:
+			fpos += 1
+	elif T1[i] == 0:
+		pos += 1
+		if o <= threshold:
+			ncorrect += 1
+		else:
+			fneg += 1
+	# target vs. actual
+	wrong = '*' if (o <= threshold and T1[i] == 1) or (o > threshold and T1[i] == 0) else ' '
+	outs.append([o, T[i], wrong])
+df = pd.DataFrame(data=outs, columns=['MLP Output', 'Time of death', 'wrong?'])
 print('\n',section('Shallow Perceptron'))
 print('Threshold: outputs >', threshold, 'are considered "alive"')
 print('False Positives:', str(fpos)+'/'+str(neg), 'False Negatives:', str(fneg)+'/'+str(pos))

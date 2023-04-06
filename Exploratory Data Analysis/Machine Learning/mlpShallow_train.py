@@ -23,4 +23,4 @@ p.train(I, T, neps=20000, eta=0.005, mew=0.05)
 
 # save the results
 savedir = 'modules{0}saves{0}'.format(os.sep)
-p.save(ih = savedir+'ihShallow.npy', ho = savedir+'hoShallow.npy')
+p.save(ih = savedir+'ihShallow1.npy', ho = savedir+'hoShallow1.npy')
