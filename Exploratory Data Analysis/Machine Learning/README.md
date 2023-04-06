@@ -14,7 +14,7 @@
 
 3. Something called an LSTM. I will cross that bridge when I get to it
 
-### But before I can do any of that, I need to somehow parse this data into something we can use to train these suckers.
+### But before I can do any of that, I need to somehow parse and __compress__ this data to make it learnable.
 
 * First, define a *target* output for each spider by saving the row where it died
   * this is what makes the data useable for training the models
