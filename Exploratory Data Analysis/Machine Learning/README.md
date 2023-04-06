@@ -4,7 +4,7 @@
 
 ### Check out the idea pitch for a basic outline to the problem. 
 
-### What I have are three .csv files where spider activity is tallied at each minute (row). Some friendly Pre-Meds in the Neuroscience department marked off points where the spider died, I can use that to __train__ the models.
+### What I have are three .csv files where spider activity is tallied at each minute (row). The time of individual spider deaths  was provided by combined decision of two circadian expert. I can use that to __train__ the models.
 
 ### I want to try three different approaches here:
 
