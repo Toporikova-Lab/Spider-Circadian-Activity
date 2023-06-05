@@ -10,3 +10,4 @@ os.chdir('D:\Practical Time Series')
 
 data = pd.read_csv('datasets/WDI_csv/WDIData.csv')
 
+print('Column names:', data.columns)
