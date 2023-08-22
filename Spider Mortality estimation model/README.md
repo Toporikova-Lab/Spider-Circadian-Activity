@@ -39,6 +39,14 @@ Since every parameter in the model is originially set to a random value, there i
 * mlpShallow_test.py
 * mlpShallow_train.py
 
+### Steps to recreate experiment for MLP Classifier:
+
+1. cd to the Spider Mortality Estimation model repository and type `pip install -r requirements.txt`
+
+2. train the model with the command `python3 mlpShallow_train.py`. Training chart will generate in `modules/saves/shallowe.png`
+
+3. test the model with the command `python3 mlpShallow_test.py`. Testing table will be printed to the terminal.
+
 ----
 
 ## Using a DEEP MLP Classifier
@@ -53,3 +61,11 @@ So, how did this extra time pay off? Not great. Overall, the result of 86% accur
 
 * mlp_test.py
 * mlp_train.py
+
+### Steps to recreate experiment for Deep MLP Classifier:
+
+1. cd to the Spider Mortality Estimation model repository and type `pip install -r requirements.txt`
+
+2. train the model with the command `python3 mlp_train.py`. Training chart will generate in `precomp/deepsave/learning.png`
+
+3. test the model with the command `python3 mlp_test.py`. Testing table will be printed to the terminal.
