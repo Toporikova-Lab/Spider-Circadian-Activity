@@ -12,7 +12,14 @@
 
 2. A more complicated and powerful MLP model with PyTorch
 
-### But before I can do any of that, I need to somehow parse and __compress__ this data to make it learnable.
+The first approach involves implementing a machine learning algorithm called the perceptron learning algorithm line by line using a module called NumPy. The algorithm outputs a data file in binary representing a model for the spider circadian activity data. This model takes in a column of spider circadian activity data and outputs a number between 0.0 and 1.0 represent the *confidence* that a spider is still alive. 
+
+Similar to the first approach, the second approach will train another model to create another binary data file. This approach, however, takes advantage of a more advanced *deep* perception learning algorithm to train a more sophisticated model for the spider circadian activity data. Moreover, this approach utilizes the PyTorch machine learning framework 
+as opposed to a line by line implementation of the perceptron learning algorithm. Using PyTorch will allow for training the model using GPU hardware, if available, which may make the training go faster. The output of the model is two numbers representing the *probability* of a spider being alive or dead given the spider circadian activity data fed into it.
+
+### To make the data learnable, however, I need to parse and __compress__ it.
+
+This is because the amount of information for each spider is very complex. The greater the complexity, the more expensive it will be for the program to learn input/output patterns and train a model. Using some pre-computation, this complexity may greatly be reduced thus driving down the cost of training.
 
 * First, define a *target* output for each spider by saving the row where it died
   * this is what makes the data useable for training the models
