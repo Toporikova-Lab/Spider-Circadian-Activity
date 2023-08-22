@@ -4,7 +4,7 @@
 
 ### See the idea pitch for a basic outline to the problem. 
 
-### What I have are three .csv files where spider activity is tallied at each minute (row). The time of individual spider deaths  was provided by combined decision of two circadian expert. I can use that to __train__ the models.
+### What I have are three .csv files where spider activity is tallied at each minute (row). The time of individual spider deaths was provided by combined decision of two circadian experts. I can use that to __train__ the models.
 
 ### I will to try two different approaches here:
 
@@ -76,3 +76,9 @@ So, how did this extra time pay off? Not great. Overall, the result of 86% accur
 2. train the model with the command `python3 mlp_train.py`. Training chart will generate in `precomp/deepsave/learning.png`
 
 3. test the model with the command `python3 mlp_test.py`. Testing table will be printed to the terminal.
+
+---
+
+### A note on using external data
+
+The shape of the model *must* mach with the size of the patterns being fed into it, meaning each .csv file used as testing or training data must have exactly 12960 rows or else it will cause the program to crash.
