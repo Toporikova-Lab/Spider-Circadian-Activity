@@ -24,7 +24,19 @@ Locomotion data is collected using a Locomotor Activity Monitor (LAM). The spide
 
 *A Locomotor Activity Monitor by TriKinetics*
 
-## First-pass Processing and Visualization
-### Required Files and Materials 
+### Files and Materials Utilized
 * Juypter Notebook, which can be installed by navigating to the [Anaconda website](https://www.anaconda.com/download)
 * a .csv file with locomotor activity, where each column is a spider, light data in binary, time (hh:mm:ss) information, date (YYYY-MM-DD) information
+  - ensure that .csv file is in same folder as the notebook you are working in
+
+### First-pass Processing
+* Upload data into dataframe and clean by removing empty or unnecessary cells
+* Convert date and time data to readable and manipulatable format using Python's datetime package
+* Find average activity for each time point to analyze population of spider
+* Create rolling frame to find rolling average - this smooths your data, limits the influence of outliers on the visualization, and helps you identify potential entrainment, cycles, or other features of note
+  - the length of the rolling frame depends on your data, once you plot your data, you can experiment with the frame length
+
+### Visualization of Average Activity Data
+* Create plot (and subplot if analyzing more than one population)
+* Plot rolling average date and light data on the same plot, in different colors
+* Label axes
