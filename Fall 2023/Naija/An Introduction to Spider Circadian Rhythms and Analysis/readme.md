@@ -31,6 +31,7 @@ Locomotion data is collected using a Locomotor Activity Monitor (LAM). The spide
   2. light data in a binary where: light = 1 and darkness = 0
   3. locomotor activity counts of a single spider is a spider
 * ensure that .csv file is in same folder as the notebook you are working in
+
 ![Example .csv file structure](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Fall%202023/Naija/An%20Introduction%20to%20Spider%20Circadian%20Rhythms%20and%20Analysis/2Capture.PNG)
 
 ### First-pass Processing
