@@ -20,4 +20,5 @@ Circadian rhythms can be studied by analyizing biochemical changes, such as chan
 
 Locomotion data is collected using a Locomotor Activity Monitor (LAM). The spiders are placed in glass tubes by themselves and the tubes are inserted into the LAM array. The array sends infrared (IR) beams of light through the tubes and an data point is collected each time the IR beam is broken by the spider. The LAM monitor also collects data about the light conditions the spiders are in and record light presence in a simple binary, where 1 means light, and 0 means darkness. This set up allows data from multiple spiders, under the same light conditions to be collected at once.
 
-![Locomotor Activity Monitor](/An Introduction to Spider Circadian Rhythms and Analysis/Capture.PNG)
+![Locomotor Activity Monitor](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/assets/148475054/d80e59d3-9c4b-4b12-a40f-9fd625dfd4dd)
+
