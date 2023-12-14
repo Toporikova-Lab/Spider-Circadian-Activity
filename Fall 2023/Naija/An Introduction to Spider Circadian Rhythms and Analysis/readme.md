@@ -49,6 +49,6 @@ Locomotion data is collected using a Locomotor Activity Monitor (LAM). The spide
 ![Final Result](https://github.com/Toporikova-Lab/Spider-Circadian-Activity/blob/main/Fall%202023/Naija/An%20Introduction%20to%20Spider%20Circadian%20Rhythms%20and%20Analysis/3Capture.PNG)
 
 **At the end of this process, you will have a**
-* Clean dataframe to do further operations with
+* Clean dataframe with datetime-formatted index to do further operations with
 * Dataframe containing average spider activity to do further statistical anaylsis with
 * Plot clearly visualizing average spider activity data for one or more populations and the light conditions
