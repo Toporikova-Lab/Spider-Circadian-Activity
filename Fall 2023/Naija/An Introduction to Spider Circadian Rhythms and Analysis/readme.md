@@ -52,3 +52,11 @@ Locomotion data is collected using a Locomotor Activity Monitor (LAM). The spide
 * Clean dataframe with datetime-formatted index to do further operations with
 * Dataframe containing average spider activity to do further statistical anaylsis with
 * Plot clearly visualizing average spider activity data for one or more populations and the light conditions
+
+## Acknoledgements
+* Dr. Toporikova for providing guidance and assistance through out this semester and learning experinence
+* Emily Bradley and Schuyler Clark for showing me how to feed the spiders
+
+### References
+[Mah et al., 2020](https://link.springer.com/article/10.1007/s00359-020-01412-y)
+[Tataroglu & Emery, 2014](https://www.sciencedirect.com/science/article/pii/S1046202314000024?via%3Dihub)
