@@ -26,8 +26,11 @@ Locomotion data is collected using a Locomotor Activity Monitor (LAM). The spide
 
 ### Files and Materials Utilized
 * Juypter Notebook, which can be installed by navigating to the [Anaconda website](https://www.anaconda.com/download)
-* a .csv file with locomotor activity, where each column is a spider, light data in binary, time (hh:mm:ss) information, date (YYYY-MM-DD) information
-  - ensure that .csv file is in same folder as the notebook you are working in
+* a .csv file with locomotor activity, with the following column in order
+  1. date (YYYY-MM-DD) and time (hh:mm:ss) information,
+  2. light data in a binary where: light = 1 and darkness = 0
+  3. locomotor activity counts of a single spider is a spider
+* ensure that .csv file is in same folder as the notebook you are working in
 
 ### First-pass Processing
 * Upload data into dataframe and clean by removing empty or unnecessary cells
