@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.dates as dates
+from datetime import datetime
 
 def moving_avg(series, window):
     series_padded = np.append([np.NaN] * (window//2 - 1), np.append(np.array(series), [np.NaN] * (window//2 - 1)))
@@ -14,7 +16,7 @@ def moving_avg(series, window):
 def diff(series):
     return [series[n+1] - series[n] for n in range(len(series) - 1)] + [0]
 
-# return a list of pairs (time_start, time_stop) for each bout of activity
+# return a list of pairs [time_start, time_stop] for each bout of activity
 # based on slope to find start and stop times
 def detect_slope(series, times, cutoff = .25, avg_window = 30, avg_slope_window = 10):
     smoothed = moving_avg(series, avg_window)
@@ -38,7 +40,9 @@ def detect_slope(series, times, cutoff = .25, avg_window = 30, avg_slope_window 
             pairs[-1][1] = times[n]
 
     return pairs
-                
+
+# return a list of pairs [time_start, time_stop] for each bout of activity
+# based on threshold (mean) to find start and stop times      
 def detect_threshold(series, times, avg_window = 30):
     smoothed = moving_avg(series, avg_window)
 
@@ -59,3 +63,17 @@ def detect_threshold(series, times, avg_window = 30):
             pairs[-1][1] = times[n]
 
     return pairs
+
+def format_times(axs, format):
+    for ax in axs:
+        ax.xaxis.set_major_formatter(dates.DateFormatter(format))
+
+def interpret_times(strs, format):
+    return [datetime.strptime(time, format) for time in strs]
+
+def mean_length(pairs):
+    length_sum = 0
+    for pair in pairs:
+        length_sum += (pair[1].timestamp() - pair[0].timestamp())
+
+    return length_sum / len(pairs)
