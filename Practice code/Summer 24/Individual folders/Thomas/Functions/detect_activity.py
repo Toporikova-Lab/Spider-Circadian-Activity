@@ -42,34 +42,40 @@ def detect_slope(series, times, cutoff = .25, avg_window = 30, avg_slope_window 
     return pairs
 
 # return a list of pairs [time_start, time_stop] for each bout of activity
-# based on threshold (mean) to find start and stop times      
-def detect_threshold(series, times, avg_window = 30):
+# based on threshold (mean)    
+def detect_threshold_endpoints(series: np.ndarray, times, avg_window = 30):
     smoothed = moving_avg(series, avg_window)
 
     smoothed_filtered = np.nan_to_num(smoothed)
     mean = np.mean(smoothed_filtered)
 
-    def detect(level):
-        return int(level > mean)
-    
-    DETECT = np.vectorize(detect)(smoothed)
+    is_active_series = smoothed_filtered > mean
 
-    pairs = [[times[0], times[0]]]
+    is_active_series_shiftedback = np.append(np.delete(is_active_series, [1]), False)
 
-    for n, s in enumerate(diff(DETECT)):
-        if s > 0:
-            pairs.append([times[n], times[n]])
-        if s < 0:
-            pairs[-1][1] = times[n]
+    starts = times[(is_active_series == False) & (is_active_series_shiftedback == True)]
+    stops = times[(is_active_series == True) & (is_active_series_shiftedback == False)]
 
-    return pairs
+    return starts, stops
+
+# return a series of boolean values telling whether the spider is active or not at any given time
+# based on threshold (mean)
+def detect_threshold_series(series: np.ndarray, times, avg_window = 30):
+    smoothed = moving_avg(series, avg_window)
+
+    smoothed_filtered = np.nan_to_num(smoothed)
+    mean = np.mean(smoothed_filtered)
+
+    is_active_series = smoothed_filtered > mean
+
+    return is_active_series
 
 def format_times(axs, format):
     for ax in axs:
         ax.xaxis.set_major_formatter(dates.DateFormatter(format))
 
 def interpret_times(strs, format):
-    return [datetime.strptime(time, format) for time in strs]
+    return np.array([datetime.strptime(time, format) for time in strs])
 
 def mean_length(pairs):
     length_sum = 0
