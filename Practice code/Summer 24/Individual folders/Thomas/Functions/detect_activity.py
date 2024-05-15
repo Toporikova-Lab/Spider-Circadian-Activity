@@ -41,7 +41,7 @@ def detect_slope(series, times, cutoff = .25, avg_window = 30, avg_slope_window 
 
     return pairs
 
-# return a list of pairs [time_start, time_stop] for each bout of activity
+# return a pair of lists ([start_times], [stop_times]) for the beginnings and ends of each bout of activity
 # based on threshold (mean)    
 def detect_threshold_endpoints(series: np.ndarray, times, avg_window = 30):
     smoothed = moving_avg(series, avg_window)
@@ -60,7 +60,7 @@ def detect_threshold_endpoints(series: np.ndarray, times, avg_window = 30):
 
 # return a series of boolean values telling whether the spider is active or not at any given time
 # based on threshold (mean)
-def detect_threshold_series(series: np.ndarray, times, avg_window = 30):
+def detect_threshold_series(series: np.ndarray, avg_window = 30):
     smoothed = moving_avg(series, avg_window)
 
     smoothed_filtered = np.nan_to_num(smoothed)
