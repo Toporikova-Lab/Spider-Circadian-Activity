@@ -49,3 +49,14 @@ The pipeline will generate the following information:
 
 The raw numbers will be written to a text file as elaborated above, and the periodograms will be saved to a folder. 
 ![LS_MsD_05_0718 ](https://github.com/user-attachments/assets/d62e0b7b-8482-4d11-9b98-512731fe0230)
+
+### Have questions or issues to report? 
+Either visit our customer portal at https://spidercoding.atlassian.net/servicedesk/customer/portal/1 or email us at support@spidercoding.atlassian.net!
+
+### Future work!
+Editions of the pipeline in the works:
+- Adding support for cosinor regression models that can also help with period approximation
+- Adding GUI support for easier use and further customization!
+- Adding support for circadian masking
+
+# Thanks so much for using our pipeline! :) 
