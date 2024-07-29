@@ -7,11 +7,17 @@ Currently, the pipeline processes spider circadian activity data and generates r
 
 **File name**: This input should be the name of the .txt or.csv file that needs to be processed. The file name **MUST** be in the format 
 <spider group> <light condition> <start date> - <end date> - <year> .txt/.csv. For example, the file MsD DD 0718 - 0722 - 2024.txt where:
+
 *MsD* is the group name - Metazygia group D
+
 *DD* is the light conditions the spiders were subjected to - constant darkness
+
 *0718* is the start date, MMDD
+
 *0722* is the end date, MMDD
+
 *2024* is the year of the experiment, YYYY
+
 The pipeline will look for data in the **Data folder** inside **circadian pipeline**.
 
 **Binarized**: This input either takes the word True, if you would prefer the data to be binarized, or False, if you would like the data to be processed as is. 
@@ -24,6 +30,7 @@ The pipeline will look for data in the **Data folder** inside **circadian pipeli
 *display*: This will tell the code to write the information to the text file and also display the periodograms on the command line, if that is supported on your machine. 
 
 *save*: This will tell the code to save the periodograms to a folder as .png files. In our example, the name of the folder was "LS_MsD_DD_0718".
+
 <img width="225" alt="Screenshot 2024-07-28 at 7 09 55 PM" src="https://github.com/user-attachments/assets/7c61c525-9e24-420e-ae25-417239dacfc7"> 
 
 *dis+save*: This option saves the periodograms and displays them.
