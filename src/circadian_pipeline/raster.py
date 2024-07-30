@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 
-def raster_plot(df, spider_column, group_name, start_date, raster_path):
+def raster_plot(df, spider_column, group_name, end_date, raster_path):
     
     fig23 = plt.figure(figsize=(6, 4))
 
@@ -40,7 +40,7 @@ def raster_plot(df, spider_column, group_name, start_date, raster_path):
             ax.set_xticklabels(np.arange(0, 25, 2), rotation='horizontal', fontsize=7)
             ax.set_xlabel('Time (hours)')
 
-    file_path = os.path.join(raster_path, f"{group_name}_{spider_column[-2:]}_{start_date}_raster_plot.png")
+    file_path = os.path.join(raster_path, f"{group_name}_{spider_column[-2:]}_{end_date}_raster_plot.png")
     plt.savefig(file_path)
     plt.close(fig23)
 

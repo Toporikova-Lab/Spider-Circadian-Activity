@@ -15,11 +15,15 @@ def main():
     df, spiders = data_cleaning.data_organizer(filename)
 
     #Get information from the name of the csv file
-    group_name, light_condition, start_date, path, two_lights = data_cleaning.info_from_naming_pattern(filename)
+    group_name, light_condition, start_date, end_date, path, two_lights = data_cleaning.info_from_naming_pattern(filename)
+
+    #Using the "Light" column, determine the LD, DD, and LL days of the experiment
     condition_days, condition_keys = data_cleaning.light_code(df)
 
     #Resample data to pass into raster plot
     df_processed = data_cleaning.resample_df_six_mins(df, spiders, binarize = binarized)
+
+    df.set_index('Time', inplace=True)
 
     raster_path = path + "_raster_plots"
     LS_path = "LS_" + path
@@ -31,7 +35,7 @@ def main():
         os.makedirs(raster_path)
 
     #display(df_processed)
-    filepath = f"{group_name}_{start_date}_LS_info.txt"
+    filepath = f"{group_name}_{end_date}_LS_info.txt"
     """# Ensure 'Time' column is in datetime format
     if not np.issubdtype(df['Time'].dtype, np.datetime64):
         df_processed['Time'] = pd.to_datetime(df['Time'])
@@ -45,8 +49,9 @@ def main():
             spider_column = f"Sp{i:02d}"  # Create the correct column name
             print(spider_column)
             print(spider_column[-2:])
-            raster.raster_plot(df_processed, spider_column, group_name, start_date, raster_path)
-            period, fap = lomb_scargle.period_LS(df_processed, spider_column, light_condition, condition_days, group_name, info_file, LS_path, start_date, result_type=result_type_ls)
+            raster.raster_plot(df_processed, spider_column, group_name, end_date, raster_path)
+            for light_con in condition_keys:
+                period, fap = lomb_scargle.period_LS(df, spider_column, light_con, condition_days, group_name, info_file, LS_path, end_date, result_type=result_type_ls)
 
 
 if __name__ == "__main__":

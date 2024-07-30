@@ -1,4 +1,5 @@
-"""A module to prepare the raw CSV files 
+"""
+A module to prepare the raw CSV files 
 of time series spider activity data for processing.
 
 The data cleaning function accepts a txt or a CSV file and returns a list of the 
@@ -19,6 +20,10 @@ import datetime
 import os
 
 def data_organizer(file_name):
+    """
+    This function takes in a file, creates a dataframe, organizes it, and returns the organized 
+    Pandas dataframe and the numbers of the channels of the experimental subjects
+    """
 
     col_names = ["Index", "DateD", "DateM", "DateY", "Time", "MonStatus", "Extras", "MonN", "TubeN", "DataType", "Unused", "Light"]
     # These are the original columns in the NAME monitors
@@ -35,13 +40,7 @@ def data_organizer(file_name):
     df = df.set_index('Index')
     # Reading the original file into a dataframe, assigning the previously created column names
     # The original file does not have any column names
-
-    deleted_data = df[df["MonStatus"] != 1]
-    print(f"Removed rows of data where Monitor Status is not 1: {len(deleted_data)}\n")
-    df = df[df["MonStatus"] == 1]
-    # Finding the times when the monitor was not functional and removing these rows for cleaner data
-    # Additionally, reporting to the user how many minutes of data were lost
-
+    
     df['Time'] = pd.to_datetime(df['Time'], format='%H:%M:%S', errors='coerce')
     # Changing the format of the "Time" column, so that it can be integrated into the "datetime" module
       
@@ -79,11 +78,18 @@ def data_organizer(file_name):
         if not i in spiders:
             df = df.drop([f"Sp{i:02d}"], axis=1)
 
-    # 
+    # Excluding the channels that do not show more than 10 activity counts
+    # 10 count cutoff aims to disregard the noise during the experiment setup
+    # Creating a list of spiders that show activity in the experiment
 
     return df, spiders
+    # The function returns the dataframe and the channel numbers of the subjects
 
 def get_deleted_data(df) :
+    """
+    Finding the times when the monitor was not functional and removing these rows for cleaner data.
+    Additionally, reporting to the user how many minutes of data were lost
+    """
     deleted_data = df[df["MonStatus"] != 1]
     num_rows = len(deleted_data)
     df = df[df["MonStatus"] == 1]
@@ -91,6 +97,13 @@ def get_deleted_data(df) :
 
 
 def light_code(df):
+    """
+    This function uses the information from "Light" column
+    to determine whether each day of the experiment is DD, LD,
+    or LL. Then, it returns the list of the present light 
+    conditions and the days when each light condition takes place
+    
+    """
     LL_days = []
     LD_days = []
     
@@ -102,7 +115,13 @@ def light_code(df):
                 LL_days.append(j)
             else:
                 LD_days.append(j)
-    
+    # Determining which days of the experiment have light and separating
+    # them into LD and LL days based on the minutes of light on
+    # 10 counts in determining an LD day were chosen in order to avoid
+    # noise during experimental setup
+    # 1000 counts in determining an LL day were chosen since most of the
+    # time LD is about 12 hours (720 minutes), and 1000 is just in case
+
     condition_days = {}
     
     condition_days['LD'] = LD_days
@@ -110,35 +129,77 @@ def light_code(df):
     condition_days['DD'] = [x for x in df['Day'].unique() if not x in LL_days and not x in LD_days]
     
     condition_days['LL'] = LL_days
-    
+    # Creating a dictionary which contains the three light condition
+    # possibilities and their corresponding days in the experiment
     
     condition_keys = [key for key in condition_days if condition_days[key]]
+    # Determining which light conditions are present in the experiment
 
     return condition_days, condition_keys
+    # This function returns the light conditions in the experiment
+    # and the days of each light condition
 
 def info_from_naming_pattern(file_name):
+    """
+    This function takes in a file name in the format
+    of "group name + light condition + start date +
+    end date + year", as follows
+
+    Example: MsB LD-DD 0607 - 0618 - 2024.txt
+
+    Then it creates a naming pattern for folders and files,
+    so that it is easier to navigate the output of
+    graphs from later functions
+    """
+
     group_name = file_name.split(' ', 2)[0]
     light_condition = file_name.split(' ', 2)[1]
     start_date = file_name.split(' ', 2)[2].split('-', 1)[0]
-    
-    path = group_name + "_" + light_condition + "_" + start_date
+    end_date = file_name.split(' ', 2)[2].split('-', 1)[1]
+    # The function uses the naming pattern of the original file
+    # to determine the group name, light condition(s), start date,
+    # and end date of the experiment
+
+    path = group_name + "_" + light_condition + "_" + end_date
+    # The path combines the group name, light condition, and
+    # end date of the experiment
+    # It is later used to create folders to store graphs in
     
     two_lights = False
     if "-" in light_condition:
         two_lights = True
+    # Checking if there are multiple light conditions in
+    # the experiment (ex: LD-DD)
 
-    return group_name, light_condition, start_date, path, two_lights
+    return group_name, light_condition, start_date, end_date, path, two_lights
+    # The function returns the group name, experimental light conditions, 
+    # start date, end date, the folder path, and whether there are two
+    # light conditions in the experiment
 
 def resample_df_six_mins(df, spiders, binarize = False):
+    """
+    This function resamples the data frame into 6 minute
+    pieces, which helps to better visualize sparse data.
+    Additionally, it allows the user to then binarize the
+    resampled data
+    """
+
     df_res = df.copy()
     df_res.set_index('Time', inplace=True)
+    # Creating a new data frame to later resample
 
     spider_columns = [f"Sp{sp:02d}" for sp in spiders]
+    # Figuring out which columns need to be resampled
 
     df_resampled = df_res[spider_columns].resample('6T').sum()
+    # Resampling the spider columns for every 6 minutes,
+    # adding up all the counts
 
     day_resampled = df_res['Day'].resample('6T').bfill()
     light_resampled = df_res['Light'].resample('6T').bfill()
+    # Resampling the day and light columns by removing the
+    # 5 rows below each time point
+
 
     #if binarize = True, binarize dataframe
     if binarize:
@@ -154,3 +215,6 @@ def resample_df_six_mins(df, spiders, binarize = False):
 
 def convert_to_one(x):
     return 1 if x != 0 else 0
+    # This function determines whether there is 
+    # activity in the resampled piece, and then
+    # binarizes it
