@@ -2,15 +2,22 @@
 ### In this tutorial, we will walk through the easiest way to use this pipeline.
 Currently, the pipeline processes spider circadian activity data and generates raster plots, Lomb-Scargle periodograms, and Lomb-Scargle information.
 ### This version of the pipeline runs on the *command line*. 
+**Before running the file,** the user must ensure that they have all the needed modules installed. 
+
+The modules are as follows:
+`matplotlib` `numpy` `astropy` `jdcal` `pandas`
+
+A simple way to install the modules is by using `pip install`, for example `pip install matplotlib`.
+
 **To run the file,** the command should be in the format `python3 pipeline.py <filename> <binarized> <ls_result>`. As the pipeline is running, it will print out the numbers of the spiders as they are processed so the user can follow along. 
 <img width="724" alt="Screenshot 2024-07-28 at 7 08 34 PM" src="https://github.com/user-attachments/assets/41a7dbfe-cb00-4bfc-90ac-3d39af5baa69">
 
 **File name**: This input should be the name of the .txt or.csv file that needs to be processed. The file name **MUST** be in the format 
-<spider group> <light condition> <start date> - <end date> - <year> .txt/.csv. For example, the file MsD DD 0718 - 0722 - 2024.txt where:
+<spider group> <light condition> <start date> - <end date> - <year> .txt/.csv. For example, the file MsD DD-LD 0718 - 0722 - 2024.txt where:
 
 *MsD* is the group name - Metazygia group D
 
-*DD* is the light conditions the spiders were subjected to - constant darkness
+*DD-LD* is the light conditions the spiders were subjected to - constant darkness, then light and dark
 
 *0718* is the start date, MMDD
 
