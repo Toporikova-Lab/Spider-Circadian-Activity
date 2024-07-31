@@ -53,6 +53,8 @@ def main():
             for light_con in condition_keys:
                 period, fap = lomb_scargle.period_LS(df, spider_column, light_con, condition_days, group_name, info_file, LS_path, end_date, result_type=result_type_ls)
 
+    raster.combined_raster(raster_path, group_name, end_date, figsize=(15, 10))
+
 
 if __name__ == "__main__":
     main()

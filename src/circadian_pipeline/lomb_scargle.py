@@ -85,7 +85,8 @@ def period_LS(df, spider, light_con, condition_days, group_name, info_file, LS_p
             print(f"Plotting red dot at ({best_period_power})")
         else:
             print(f"Best period {best_period} is outside the plot range (12-48)")
-            
+        
+        plt.axhline(y=0.05, color='r')
         plt.xlabel('Period (hours)')
         plt.ylabel('Power')
         plt.xlim(12, 49)

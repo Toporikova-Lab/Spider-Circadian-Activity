@@ -155,7 +155,7 @@ def info_from_naming_pattern(file_name):
     group_name = file_name.split(' ', 2)[0]
     light_condition = file_name.split(' ', 2)[1]
     start_date = file_name.split(' ', 2)[2].split('-', 1)[0]
-    end_date = file_name.split(' ', 2)[2].split('-', 1)[1]
+    end_date = file_name.split(' ', 7)[4]
     # The function uses the naming pattern of the original file
     # to determine the group name, light condition(s), start date,
     # and end date of the experiment
