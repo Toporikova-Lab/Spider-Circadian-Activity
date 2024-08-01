@@ -1,6 +1,5 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as _np
+import matplotlib.pyplot as _plt
 
 def raster_binary(dataframe, spider_name, title, rolling_window=1):
     """
@@ -19,7 +18,7 @@ def raster_binary(dataframe, spider_name, title, rolling_window=1):
     
     days = sp_df['Day'].unique()
     
-    fig, axs = plt.subplots(len(days), 1)
+    fig, axs = _plt.subplots(len(days), 1)
     
     fig.suptitle(title)
     fig.supxlabel('Time (hrs)')
@@ -43,8 +42,8 @@ def raster_binary(dataframe, spider_name, title, rolling_window=1):
         ax.fill_between(time, 0, 1, where=light, alpha=.5, color='yellow')
         ax.fill_between(time, 0, 1, where=(activity.rolling(rolling_window).mean() > 0), alpha=1)
     
-    axs[-1].set_xticks(np.arange(0, 25, 2))
-    axs[-1].set_xticklabels(np.arange(0, 25, 2), rotation = 'horizontal')
+    axs[-1].set_xticks(_np.arange(0, 25, 2))
+    axs[-1].set_xticklabels(_np.arange(0, 25, 2), rotation = 'horizontal')
 
     return fig, axs
 
@@ -65,7 +64,7 @@ def raster_line(dataframe, spider_name, title, rolling_window=1):
     
     days = sp_df['Day'].unique()
     
-    fig, axs = plt.subplots(len(days), 1)
+    fig, axs = _plt.subplots(len(days), 1)
     
     fig.suptitle(title)
     fig.supxlabel('Time (hrs)')
@@ -90,7 +89,7 @@ def raster_line(dataframe, spider_name, title, rolling_window=1):
 
         ax.plot(time, activity / max(activity), color='black')
     
-    axs[-1].set_xticks(np.arange(0, 25, 2))
-    axs[-1].set_xticklabels(np.arange(0, 25, 2), rotation = 'horizontal')
+    axs[-1].set_xticks(_np.arange(0, 25, 2))
+    axs[-1].set_xticklabels(_np.arange(0, 25, 2), rotation = 'horizontal')
 
     return fig, axs

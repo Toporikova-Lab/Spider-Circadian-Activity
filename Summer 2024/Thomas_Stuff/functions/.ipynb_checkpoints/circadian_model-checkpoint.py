@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as _np
 
 # -- LIGHT INTENSITY FUNCTIONS --
 
@@ -8,10 +8,13 @@ def LD(t, intensity, off_time=12, daylength=24):
     Light intensity as a function of t. Default: 12hrs light, 12hrs dark.
 
     Parameters:
-    t: float or array -- input time
+    t: float -- input time
     intensity: float -- returns when light is on
-    off_time: time at which the lights turn off. Must be less than daylength
-    
+    off_time: float -- time at which the lights turn off in hours; must be less than daylength
+    daylength: float -- length of the day in hours
+
+    Returns:
+    float
     """
     time = t % daylength
     is_light = time < off_time
@@ -22,6 +25,22 @@ def LD(t, intensity, off_time=12, daylength=24):
 
 # LD function with a pulse of light or dark at the specified time and day, for the specified length (in hours)
 def LD_pulse(t, intensity, pulse_day, pulse_time, pulse_length=2, off_time=12, daylength=24):
+    """
+    Light intensity as a function of t, with a pulse at the specified time. Default: 12hrs light, 12hrs dark;
+    
+
+    Parameters:
+    t: float -- input time
+    intensity: float -- returns when light is on
+    pulse_day: int -- day of the simulation on which to add the pulse
+    pulse_time: float -- ZT time of the start of the pulse in hours
+    pulse_length: float -- length of the pulse in hours
+    off_time: float -- time at which the lights turn off in hours; must be less than daylength
+    daylength: float -- length of the day in hours
+
+    Returns:
+    float
+    """
     time = t % daylength
     day = t // daylength
     base = LD(t, intensity, off_time, daylength)
@@ -34,68 +53,60 @@ def LD_pulse(t, intensity, pulse_day, pulse_time, pulse_length=2, off_time=12, d
         
 # -- DIFFERENTIAL EQUATION SOLVING --
 
-def cartesian_lights(t, p, l, A, tau, ifunc):
+def xy_lights(t, p, l, A, tau, light_func):
     """
     Derivative functions on x and y; include effect of light
 
     Parameters:
     t: float -- time (hrs)
-    p: list [float, float] -- current x and y
+    p: [float, float] -- current x and y
     l: float -- rate of return from a disturbance (hrs^-1)
     A: float -- amplitude of base oscillation
     tau: float -- period of base oscillation (hrs)
-    ifunc: (t: float) -> float -- light intensity as a function of t
+    light_func: (float) -> float -- light intensity as a function of t
 
     Returns:
     list [float, float]
     """
     x, y = p
-    r = np.sqrt(x**2 + y**2)
+    r = _np.sqrt(x**2 + y**2)
     
-    # see equations 4 and 5 in the paper (section 4.1)
-    dx = l * x * (A - r) - 2 * np.pi * y / tau - ifunc(t)
-    dy = l * y * (A - r) + 2 * np.pi * x / tau
+    dx = l * x * (A - r) - 2 * _np.pi * y / tau - light_func(t)
+    dy = l * y * (A - r) + 2 * _np.pi * x / tau
     
     return [dx, dy]
 
-# get the solution of a simulated oscillator affected by the given light intensity function
-# returns t, (x, y)
-def get_simulation_result(l, tau, ifunc, hours, timestep=1/60, A=1):
+def get_simulation_result(l, tau, hours, light_func, timestep=1/60, A=1):
     """
-    Get the solution of a simulated oscillator affected by the given light intensity function
+    Get the solution of a simple 2-variable oscillator. 
 
     Parameters:
-    l: float -- rate of return from a disturbance (hrs^-1)
-    tau: float -- period of base oscillation (hrs)
-    ifunc: (t: float) -> float -- light intensity as a function of t
+    p0: [float...] -- initial conditions
     hours: int -- number of hours to run the simulation for
+    derivatives: (float, [float...], ...args) -> [float...] -- function taking in t, initial conditions, and args returning the derivatives of x, y, ...
     timestep: float -- timestep of ODE solver
     A: float -- amplitude of base oscillation
 
     Returns:
-    tuple (t, (x, y)
-    t: np.array[float] -- times for solutions
-    x: np.array[float] -- solution values of x
-    y: np.array[float] -- solution values of y
+    tuple (t, (x, y, ...))
+    t: [float...] -- times for solutions
+    x, y, ...: [float...] -- solution values
     """
     tspan = [0, hours]
-    t = np.arange(*tspan, timestep)
+    t = _np.arange(*tspan, timestep)
 
-    p0 = [A, 0]
-    result = solve_ivp(cartesian_lights, tspan, p0, args=(l, A, tau, ifunc), t_eval=t)
+    result = solve_ivp(xy_lights, tspan, p0, args=(l, A, tau, light_func), t_eval=t)
 
     return t, result.y
 
 # use a lomb-scargle periodogram to get the final period of a simulation; used to compare to the ZT period
-def get_simulation_period(l, tau, max_intensity, hours=144):
-    intensity = lambda x: LD_step(x) * max_intensity
+def get_simulation_period(l, tau, intensity, hours=144):
+    light_func = lambda t: LD(t, intensity)
     
     t, (x, y) = get_simulation_result(l, tau, intensity, hours)
     
-    periods = np.arange(1, 10, .1)
-    
+    periods = _np.arange(1, 10, .1)
     powers = lombscargle(t[len(x)//2:], x[len(x)//2:], freqs=1/periods)
-    
     peak_freq = periods[powers.argmax()] * 6.25
 
     return peak_freq
@@ -103,26 +114,26 @@ def get_simulation_period(l, tau, max_intensity, hours=144):
 
 def generate_arnold_tongue(size_x, size_y, tau_range, light_range, l=.1):
     def ranges(i, j, tau_range, light_range):
-        tau = np.interp(i, [0, size_x], tau_range)
-        light = np.interp(j, [0, size_y], light_range)
+        tau = _np.interp(i, [0, size_x], tau_range)
+        light = _np.interp(j, [0, size_y], light_range)
         
-        return np.array([tau, light])
+        return _np.array([tau, light])
     
     im_shape = (size_x, size_y)
     
-    param_array = np.fromfunction(lambda i, j: ranges(i, j, tau_range, light_range), (size_x + 1, size_y + 1))
+    param_array = _np.fromfunction(lambda i, j: ranges(i, j, tau_range, light_range), (size_x + 1, size_y + 1))
     
     def generator(x):
         sys.stdout.write("\r%f, %f" % (x[0], x[1]))
         sys.stdout.flush()
         return get_simulation_period(l, x[0], x[1]) - 24
     
-    new = np.apply_along_axis(generator, 0, param_array)
+    new = _np.apply_along_axis(generator, 0, param_array)
     
     fig, ax = plt.subplots(constrained_layout=True, figsize=(6, 4))
     
-    ax.set_xticks([0, size_x / 2, size_x], labels=np.round(np.interp([0, size_x / 2, size_x], [0, size_x], tau_range), decimals=3), rotation='vertical')
-    ax.set_yticks([0, size_y / 2, size_y], labels=np.round(np.interp([0, size_y / 2, size_y], [0, size_y], light_range), decimals=3))
+    ax.set_xticks([0, size_x / 2, size_x], labels=_np.round(_np.interp([0, size_x / 2, size_x], [0, size_x], tau_range), decimals=3), rotation='vertical')
+    ax.set_yticks([0, size_y / 2, size_y], labels=_np.round(_np.interp([0, size_y / 2, size_y], [0, size_y], light_range), decimals=3))
     
     ax.set_xlabel('Free-running period (hours)')
     ax.set_ylabel('Light intensity')
@@ -134,7 +145,7 @@ def generate_arnold_tongue(size_x, size_y, tau_range, light_range, l=.1):
 
     return ax
 
-def generate_pulse_sim_df(pulse_starts, periods, sim_hours:t, pulse_day: int, intensity=.15, l=.1):
+def generate_pulse_sim_df(pulse_starts, periods, sim_hours, pulse_day: int, intensity=.15, l=.1):
     # first generate a list of dictionaries
     
     rows = []
@@ -159,5 +170,5 @@ def generate_pulse_sim_df(pulse_starts, periods, sim_hours:t, pulse_day: int, in
             })
     
     # compile the list of dictionaries into a dataframe
-    df = pd.DataFrame(rows)
+    df = _pd.DataFrame(rows)
     return df

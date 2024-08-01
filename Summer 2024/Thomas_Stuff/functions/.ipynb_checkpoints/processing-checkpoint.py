@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as _pd
 
 def process_file(file):
     """
@@ -19,17 +19,17 @@ def process_file(file):
     for i in range(1, 33):
         col_names.append(f"Sp{i}")
     
-    df = pd.read_csv(file, names=col_names, sep='\s+', header=None)
+    df = _pd.read_csv(file, names=col_names, sep='\s+', header=None)
     df = df.set_index('Index')
-    df['Time'] = pd.to_datetime(df['Time'], format='%H:%M:%S', errors='coerce')
+    df['Time'] = _pd.to_datetime(df['Time'], format='%H:%M:%S', errors='coerce')
     df = df[df["MonStatus"] == 1]
 
     month_map = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}
     df['DateM'] = df['DateM'].str[:3].map(month_map)
     df['DateY'] = df['DateY'].apply(lambda x: int(str(20) + str(x)))
-    df['Date'] = pd.to_datetime(dict(year=df['DateY'], month=df['DateM'], day=df['DateD']), errors='coerce')
+    df['Date'] = _pd.to_datetime(dict(year=df['DateY'], month=df['DateM'], day=df['DateD']), errors='coerce')
 
-    df['Time'] = pd.to_datetime(dict(year=df['Date'].dt.year,
+    df['Time'] = _pd.to_datetime(dict(year=df['Date'].dt.year,
                                      month=df['Date'].dt.month,
                                      day=df['Date'].dt.day,
                                      hour=df['Time'].dt.hour,
@@ -53,7 +53,7 @@ def mins(time):
     Returns:
     int
     """
-    if isinstance(time, pd.Series):
+    if isinstance(time, _pd.Series):
         return time.dt.hour * 60 + time.dt.minute
     else:
         return time.hour * 60 + time.minute
@@ -96,8 +96,8 @@ def calculate_spider_activity(df, start_time, duration_mins=60):
     Returns:
     pandas series with index ['Sp1' ... 'Sp32']
     """
-    start_time = pd.to_datetime(start_time)
-    end_time = start_time + pd.Timedelta(minutes=duration_mins)
+    start_time = _pd.to_datetime(start_time)
+    end_time = start_time + _pd.Timedelta(minutes=duration_mins)
 
     # get the specified time window of the dataframe
     mask = (df['Time'] >= start_time) & (df['Time'] < end_time)
@@ -109,7 +109,7 @@ def calculate_spider_activity(df, start_time, duration_mins=60):
     return average_activity
 
 # get the first time that the lights turn on
-# returns a pd.Timestamp
+# returns a _pd.Timestamp
 def get_first_lightson(df):
     """
     Gets the first time that the lights are on
@@ -126,7 +126,7 @@ def get_first_lightson(df):
 
 # get all the relevant data from given pulse group and control group files: start of the pulse, control group mean activity during pulse, individual pulse group spider activity during pulse
 # control_series must be a time series like one returned from average_all_dfs
-# returns a 3-tuple (integer, float, pd.Series<float>)
+# returns a 3-tuple (integer, float, _pd.Series<float>)
 def get_masking_data(pulse_file, control_series, duration_mins=60):
     """
     Get all the relevant data from given pulse group and control group files: 
