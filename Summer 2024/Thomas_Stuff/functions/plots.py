@@ -87,7 +87,7 @@ def raster_line(dataframe, spider_name, title, rolling_window=1):
 
         ax.fill_between(time, 0, 1, where=light, alpha=.5, color='yellow')
 
-        ax.plot(time, activity / max(activity), color='black')
+        ax.plot(time, activity.rolling(rolling_window).mean() / max(activity), color='black')
     
     axs[-1].set_xticks(_np.arange(0, 25, 2))
     axs[-1].set_xticklabels(_np.arange(0, 25, 2), rotation = 'horizontal')
