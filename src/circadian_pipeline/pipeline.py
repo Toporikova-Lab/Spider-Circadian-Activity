@@ -49,7 +49,7 @@ def main():
             spider_column = f"Sp{i:02d}"  # Create the correct column name
             print(spider_column)
             print(spider_column[-2:])
-            raster.raster_plot(df_processed, spider_column, group_name, end_date, raster_path)
+            raster.raster_plot(df_processed, spider_column, group_name, end_date, raster_path, condition_days, average_raster=True)
             for light_con in condition_keys:
                 period, fap = lomb_scargle.period_LS(df, spider_column, light_con, condition_days, group_name, info_file, LS_path, end_date, result_type=result_type_ls)
 
