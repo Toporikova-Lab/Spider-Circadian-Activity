@@ -10,9 +10,10 @@ def main():
     filename = str(sys.argv[1])
     binarized = bool(sys.argv[2])
     result_type_ls = str(sys.argv[3])
+    logbook = str(sys.argv[4])
 
     #Create dataframe
-    df, logbook_spiders = data_cleaning.data_organizer(filename)
+    df, logbook_spiders = data_cleaning.data_organizer(filename, logbook)
 
     #Get information from the name of the csv file
     group_name, light_condition, start_date, end_date, path, two_lights = data_cleaning.info_from_naming_pattern(filename)
