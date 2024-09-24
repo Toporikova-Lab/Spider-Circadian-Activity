@@ -7,11 +7,12 @@ import matplotlib.image as mpimg
 import math
 import re
 
-def raster_plot(df, spider_column, group_name, end_date, raster_path):
+def raster_plot(df, spider_column, group_name, end_date, raster_path, condition_days, average_raster=False):
     
     fig23 = plt.figure(figsize=(6, 4))
 
     for j in range(1, len(df['Day'].unique()) + 1):
+
         curr_df = df[df['Day'] == j]
 
         ax = fig23.add_subplot(len(df['Day'].unique()), 1, j)
@@ -43,10 +44,17 @@ def raster_plot(df, spider_column, group_name, end_date, raster_path):
             ax.set_xticklabels(np.arange(0, 25, 2), rotation='horizontal', fontsize=7)
             ax.set_xlabel('Time (hours)')
 
+        if len(condition_days["LD"]) > 1 and average_raster==True:
+            average_raster()
+            
+
     file_path = os.path.join(raster_path, f"{group_name}_{spider_column[-2:]}_{end_date}_raster_plot.png")
     plt.savefig(file_path)
     plt.close(fig23)
 
+
+def average_raster():
+    pass
 
 def combined_raster(raster_path, group_name, end_date, figsize=(15, 10)):
     """

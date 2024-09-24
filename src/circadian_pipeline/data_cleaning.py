@@ -19,18 +19,38 @@ import matplotlib.pyplot as plt
 import datetime
 import os
 
-def data_organizer(file_name):
+def data_organizer(file_name, logbook_file=None):
     """
     This function takes in a file, creates a dataframe, organizes it, and returns the organized 
     Pandas dataframe and the numbers of the channels of the experimental subjects
     """
 
+    if not logbook_file:
+        logbook_df = pd.read_csv(logbook_file, header=1)
+        logbook_sp_names = []
+        
+        for index, row in logbook_df.iterrows():
+            logbook_sp_names.append(f"{row['Spider type']}{row['Spider ID']}_C{row["Channel"]:d02}")
+
+        logbook_df['Spider Name'] = logbook_sp_names
+
+        logbook_channels = logbook_df['Channel'].tolist()
+        logbook_df.set_index('Channel', inplace=True)
+        logbook_groups = logbook_df["Spider type"].unique()
+
     col_names = ["Index", "DateD", "DateM", "DateY", "Time", "MonStatus", "Extras", "MonN", "TubeN", "DataType", "Unused", "Light"]
-    # These are the original columns in the NAME monitors
+    # These are the original columns in the DAM System monitors
     
+    logbook_spiders = []
+
     for i in range(1, 33):
-        col_names.append(f"Sp{i:02d}")
+        if i in logbook_channels:
+            logbook_spiders.append(logbook_df.loc[i, 'Spider Name'])
+        else:
+            logbook_spiders.append(f"Sp{i:02d}")
     # Creating columns for each spider
+            
+    col_names += logbook_spiders
     
     folder_path = 'Data'
     file_path = os.path.join(folder_path, file_name)
@@ -70,6 +90,12 @@ def data_organizer(file_name):
     df.insert(0, 'Day', df['Time'].dt.day.map(day_map))
     # Converting the date into experiment day and adding a new column named "Day"
 
+    for name in logbook_spiders:
+        if df[name].sum() < 10:
+            df = df.drop([name], axis=1)
+
+   
+    """ Code without logbook
     spiders = []
     
     for i in range(1, 33):
@@ -78,11 +104,13 @@ def data_organizer(file_name):
         if not i in spiders:
             df = df.drop([f"Sp{i:02d}"], axis=1)
 
+    """
+
     # Excluding the channels that do not show more than 10 activity counts
     # 10 count cutoff aims to disregard the noise during the experiment setup
     # Creating a list of spiders that show activity in the experiment
 
-    return df, spiders
+    return df, logbook_spiders
     # The function returns the dataframe and the channel numbers of the subjects
 
 def get_deleted_data(df) :
@@ -176,7 +204,7 @@ def info_from_naming_pattern(file_name):
     # start date, end date, the folder path, and whether there are two
     # light conditions in the experiment
 
-def resample_df_six_mins(df, spiders, binarize = False):
+def resample_df_six_mins(df, logbook_spiders, binarize = False):
     """
     This function resamples the data frame into 6 minute
     pieces, which helps to better visualize sparse data.
@@ -188,10 +216,11 @@ def resample_df_six_mins(df, spiders, binarize = False):
     df_res.set_index('Time', inplace=True)
     # Creating a new data frame to later resample
 
-    spider_columns = [f"Sp{sp:02d}" for sp in spiders]
+    ###spider_columns = [f"Sp{sp:02d}" for sp in spiders]
     # Figuring out which columns need to be resampled
 
-    df_resampled = df_res[spider_columns].resample('6T').sum()
+    df_resampled = df_res[logbook_spiders].resample('6T').sum()
+    #df_resampled = df_res[spider_columns].resample('6T').sum()
     # Resampling the spider columns for every 6 minutes,
     # adding up all the counts
 
