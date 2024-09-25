@@ -7,7 +7,7 @@ import matplotlib.image as mpimg
 import math
 import re
 
-def raster_plot(df, spider_column, group_name, end_date, raster_path, condition_days, average_raster=False):
+def raster_plot(df, spider, group_name, end_date, raster_path, condition_days, average_raster=True):
     
     fig23 = plt.figure(figsize=(6, 4))
 
@@ -27,7 +27,7 @@ def raster_plot(df, spider_column, group_name, end_date, raster_path, condition_
                            color='yellow', alpha=0.3)
 
         ax.bar(curr_df.index.hour + curr_df.index.minute / 60, 
-               curr_df[spider_column], width=0.05, align='center')
+               curr_df[spider], width=0.05, align='center')
 
         ax.set_ylim(0, 1.1)
         ax.tick_params(left=False, bottom=False)
@@ -37,18 +37,18 @@ def raster_plot(df, spider_column, group_name, end_date, raster_path, condition_
         ax.set_xlabel("")
 
         if j == 1:
-            ax.set_title(f"{group_name} {spider_column[-2:]}")
+            ax.set_title(f"{spider[:-4]}")
 
         if j == len(df["Day"].unique()):
             ax.set_xticks(np.arange(0, 25, 2))
             ax.set_xticklabels(np.arange(0, 25, 2), rotation='horizontal', fontsize=7)
             ax.set_xlabel('Time (hours)')
 
-        if len(condition_days["LD"]) > 1 and average_raster==True:
-            average_raster()
+        #if len(condition_days["LD"]) > 1 and average_raster==True:
+        #    average_raster()
             
 
-    file_path = os.path.join(raster_path, f"{group_name}_{spider_column[-2:]}_{end_date}_raster_plot.png")
+    file_path = os.path.join(raster_path, f"{spider}_{end_date}_raster_plot.png")
     plt.savefig(file_path)
     plt.close(fig23)
 

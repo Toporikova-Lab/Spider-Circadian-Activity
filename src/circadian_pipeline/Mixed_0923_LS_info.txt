@@ -1,0 +1,570 @@
+
+
+Lomb-Scargle information for Spider Ag01_C01 in LD 
+
+Periods under top local maxima frequencies:
+1: 17.511727988213856
+2: 13.427671086271479
+3: 23.93767555249351
+The Lomb-Scargle approximation of the LD period is 17.509691425027135 hours.
+The False Alarm Probability for this prediction is: 0.0017958509509950803
+
+Lomb-Scargle information for Spider Ag01_C01 in DD 
+
+Periods under top local maxima frequencies:
+1: 30.79841897233202
+2: 22.278012253233495
+3: 17.02726326742976
+The Lomb-Scargle approximation of the DD period is 30.79262325931502 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider Ag02_C02 in LD 
+
+Periods under top local maxima frequencies:
+1: 26.443416661787953
+2: 31.486929243638897
+3: 13.075497915701714
+The Lomb-Scargle approximation of the LD period is 26.438773121048936 hours.
+The False Alarm Probability for this prediction is: 8.812049119096923e-32
+
+Lomb-Scargle information for Spider Ag02_C02 in DD 
+
+Periods under top local maxima frequencies:
+1: 44.15326497571506
+2: 16.75184275184275
+3: 27.966501452743124
+The Lomb-Scargle approximation of the DD period is 44.141354194766656 hours.
+The False Alarm Probability for this prediction is: 1.0443604171485613e-06
+
+Lomb-Scargle information for Spider Ag03_C03 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.650985100693116
+2: 15.939584289092
+3: 17.505619719401597
+The Lomb-Scargle approximation of the LD period is 24.646949688966494 hours.
+The False Alarm Probability for this prediction is: 9.03825038359885e-13
+
+Lomb-Scargle information for Spider Ag03_C03 in DD 
+
+Periods under top local maxima frequencies:
+1: 24.141634700501623
+2: 17.768704528178958
+3: 31.928195121951223
+The Lomb-Scargle approximation of the DD period is 24.13807346216256 hours.
+The False Alarm Probability for this prediction is: 7.995373242663209e-11
+
+Lomb-Scargle information for Spider Ag04_C04 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.83913020530955
+2: 19.806182854637143
+3: 15.584845766337727
+The Lomb-Scargle approximation of the LD period is 23.835356200527706 hours.
+The False Alarm Probability for this prediction is: 4.756537753202467e-19
+
+Lomb-Scargle information for Spider Ag04_C04 in DD 
+
+Periods under top local maxima frequencies:
+1: 44.879868348875476
+2: 19.18536756946887
+3: 33.41474372064529
+The Lomb-Scargle approximation of the DD period is 44.867562380038386 hours.
+The False Alarm Probability for this prediction is: 9.350205301294265e-07
+
+Lomb-Scargle information for Spider Ag05_C05 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.703565959308687
+2: 12.427911071978869
+3: 16.312615117916863
+The Lomb-Scargle approximation of the LD period is 24.699513315470007 hours.
+The False Alarm Probability for this prediction is: 9.70492018767917e-11
+
+Lomb-Scargle information for Spider Ag05_C05 in DD 
+
+Periods under top local maxima frequencies:
+1: 28.966542750929367
+2: 15.03141649825464
+3: 40.34319526627219
+The Lomb-Scargle approximation of the DD period is 28.96141592920354 hours.
+The False Alarm Probability for this prediction is: 0.000434632070259388
+
+Lomb-Scargle information for Spider Ag06_C06 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.07932615417422
+2: 34.19745608721986
+3: 16.529312742443093
+The Lomb-Scargle approximation of the LD period is 24.075475720910397 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider Ag06_C06 in DD 
+
+Periods under top local maxima frequencies:
+1: 34.225475841874086
+2: 13.906008328375968
+3: 27.92831541218638
+The Lomb-Scargle approximation of the DD period is 34.218318695106646 hours.
+The False Alarm Probability for this prediction is: 5.4703739006380695e-05
+
+Lomb-Scargle information for Spider Ag07_C07 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.51851047660406
+2: 12.270912005216116
+3: 17.894695138861376
+The Lomb-Scargle approximation of the LD period is 24.51451831750339 hours.
+The False Alarm Probability for this prediction is: 5.2894615424034846e-20
+
+Lomb-Scargle information for Spider Ag07_C07 in DD 
+
+Periods under top local maxima frequencies:
+1: 40.47291615137274
+2: 14.123252200932159
+3: 13.040484539368824
+The Lomb-Scargle approximation of the DD period is 40.46290801186943 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider Ag08_C08 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.699513315470007
+2: 12.412542251779385
+3: 30.107985601919744
+The Lomb-Scargle approximation of the LD period is 24.695462001093496 hours.
+The False Alarm Probability for this prediction is: 7.268586316329231e-90
+
+Lomb-Scargle information for Spider Ag08_C08 in DD 
+
+Periods under top local maxima frequencies:
+1: 16.40421052631579
+2: 43.311805187930126
+3: 23.83916083916084
+The Lomb-Scargle approximation of the DD period is 12.0 hours.
+The False Alarm Probability for this prediction is: 6.603430167315777e-22
+
+Lomb-Scargle information for Spider St01_C09 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.846681801383248
+2: 18.171138914591463
+3: 36.18650857234418
+The Lomb-Scargle approximation of the LD period is 12.0 hours.
+The False Alarm Probability for this prediction is: 4.6373028012699995e-43
+
+Lomb-Scargle information for Spider St01_C09 in DD 
+
+Periods under top local maxima frequencies:
+1: 44.23682076236821
+2: 12.953768207726409
+3: 29.183520599250933
+The Lomb-Scargle approximation of the DD period is 44.22486486486487 hours.
+The False Alarm Probability for this prediction is: 3.111069146529849e-49
+
+Lomb-Scargle information for Spider St02_C10 in LD 
+
+Periods under top local maxima frequencies:
+1: 19.2417142370282
+2: 24.78489903424056
+3: 31.699066601164994
+The Lomb-Scargle approximation of the LD period is 19.23925544149593 hours.
+The False Alarm Probability for this prediction is: 0.0001833176829262214
+
+Lomb-Scargle information for Spider St02_C10 in DD 
+
+Periods under top local maxima frequencies:
+1: 16.215637696957685
+2: 17.310060298317996
+3: 21.618707887435594
+The Lomb-Scargle approximation of the DD period is 16.214030915576696 hours.
+The False Alarm Probability for this prediction is: 2.23151526538768e-05
+
+Lomb-Scargle information for Spider St03_C11 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.563044498930566
+2: 13.192359366785443
+3: 38.907743991730555
+The Lomb-Scargle approximation of the LD period is 23.559357396202795 hours.
+The False Alarm Probability for this prediction is: 0.001301880678558446
+
+Lomb-Scargle information for Spider St03_C11 in DD 
+
+Periods under top local maxima frequencies:
+1: 24.481149012567325
+2: 46.80549199084668
+3: 16.29800796812749
+The Lomb-Scargle approximation of the DD period is 24.477486910994763 hours.
+The False Alarm Probability for this prediction is: 0.1742867983024754
+
+Lomb-Scargle information for Spider St04_C12 in LD 
+
+Periods under top local maxima frequencies:
+1: 12.228057826628405
+2: 13.574154770848986
+3: 19.138983050847457
+The Lomb-Scargle approximation of the LD period is 12.227064778971876 hours.
+The False Alarm Probability for this prediction is: 4.4749152054689083e-23
+
+Lomb-Scargle information for Spider St04_C12 in DD 
+
+Periods under top local maxima frequencies:
+1: 15.613740458015267
+2: 33.34664764621969
+3: 41.45730934887256
+The Lomb-Scargle approximation of the DD period is 15.61225073943326 hours.
+The False Alarm Probability for this prediction is: 0.9999999999999999
+
+Lomb-Scargle information for Spider St05_C13 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.398259428097806
+2: 19.71540811872545
+3: 15.439412066313452
+The Lomb-Scargle approximation of the LD period is 23.39462371160719 hours.
+The False Alarm Probability for this prediction is: 5.1578737611600745e-23
+
+Lomb-Scargle information for Spider St05_C13 in DD 
+
+Periods under top local maxima frequencies:
+1: 18.11290679654638
+2: 30.897280966767372
+3: 25.089236430542776
+The Lomb-Scargle approximation of the DD period is 18.110902047592695 hours.
+The False Alarm Probability for this prediction is: 0.0002178879055015113
+
+Lomb-Scargle information for Spider St06_C14 in LD 
+
+Periods under top local maxima frequencies:
+1: 13.40376283458959
+2: 36.10840195059557
+3: 17.703221760602023
+The Lomb-Scargle approximation of the LD period is 12.0 hours.
+The False Alarm Probability for this prediction is: 3.290846179046141e-27
+
+Lomb-Scargle information for Spider St06_C14 in DD 
+
+Periods under top local maxima frequencies:
+1: 12.528290329990046
+2: 16.346853146853146
+3: 22.458413395553116
+The Lomb-Scargle approximation of the DD period is 12.527331189710612 hours.
+The False Alarm Probability for this prediction is: 2.0763136988767565e-23
+
+Lomb-Scargle information for Spider St07_C15 in LD 
+No activity detected in the LD light condition
+
+Lomb-Scargle information for Spider St07_C15 in DD 
+
+Periods under top local maxima frequencies:
+1: 42.23851316468766
+2: 33.49682702149437
+3: 27.776608385673057
+The Lomb-Scargle approximation of the DD period is 42.227612903225804 hours.
+The False Alarm Probability for this prediction is: 1.3010417093776211e-13
+
+Lomb-Scargle information for Spider St08_C16 in LD 
+
+Periods under top local maxima frequencies:
+1: 41.02824961395223
+2: 32.499640236005185
+3: 26.93059861674219
+The Lomb-Scargle approximation of the LD period is 41.01707228478024 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider St08_C16 in DD 
+
+Periods under top local maxima frequencies:
+1: 36.970628106642565
+2: 14.368809272918863
+3: 15.843532145623547
+The Lomb-Scargle approximation of the DD period is 36.96227693697764 hours.
+The False Alarm Probability for this prediction is: 0.9243230781250313
+
+Lomb-Scargle information for Spider St11_C17 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.45479155387114
+2: 12.26991198522221
+3: 19.93204183398791
+The Lomb-Scargle approximation of the LD period is 24.450820115844746 hours.
+The False Alarm Probability for this prediction is: 1.0335222746712928e-12
+
+Lomb-Scargle information for Spider St11_C17 in DD 
+
+Periods under top local maxima frequencies:
+1: 44.52571428571429
+2: 34.09710356324234
+3: 19.622496702242472
+The Lomb-Scargle approximation of the DD period is 44.51360174102285 hours.
+The False Alarm Probability for this prediction is: 4.599170290748439e-21
+
+Lomb-Scargle information for Spider St12_C18 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.273430782459155
+2: 16.990031972917055
+3: 20.038152699525313
+The Lomb-Scargle approximation of the LD period is 24.269518026973294 hours.
+The False Alarm Probability for this prediction is: 1.820985736603841e-11
+
+Lomb-Scargle information for Spider St12_C18 in DD 
+
+Periods under top local maxima frequencies:
+1: 14.367547633681623
+2: 18.575547735270746
+3: 33.65528589058001
+The Lomb-Scargle approximation of the DD period is 14.366286215978928 hours.
+The False Alarm Probability for this prediction is: 2.7573752977300637e-15
+
+Lomb-Scargle information for Spider Lc01_C19 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.65905988971993
+2: 34.345677134818644
+3: 17.127256180797815
+The Lomb-Scargle approximation of the LD period is 24.655021834061138 hours.
+The False Alarm Probability for this prediction is: 1.488745297344882e-23
+
+Lomb-Scargle information for Spider Lc01_C19 in DD 
+
+Periods under top local maxima frequencies:
+1: 24.83411746850812
+2: 30.090474439132034
+3: 37.41015089163237
+The Lomb-Scargle approximation of the DD period is 48.0 hours.
+The False Alarm Probability for this prediction is: 7.888918347409234e-09
+
+Lomb-Scargle information for Spider Lc02_C20 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.914862074442738
+2: 38.197040169133196
+3: 17.055469546501527
+The Lomb-Scargle approximation of the LD period is 23.911064055055586 hours.
+The False Alarm Probability for this prediction is: 1.1648238706581518e-20
+
+Lomb-Scargle information for Spider Lc02_C20 in DD 
+
+Periods under top local maxima frequencies:
+1: 31.828827076444274
+2: 15.43261341129869
+3: 21.94635193133047
+The Lomb-Scargle approximation of the DD period is 31.822637106184366 hours.
+The False Alarm Probability for this prediction is: 1.6813424143635432e-06
+
+Lomb-Scargle information for Spider Lc03_C21 in LD 
+
+Periods under top local maxima frequencies:
+1: 17.530078397888694
+2: 14.664935064935065
+3: 22.316205533596836
+The Lomb-Scargle approximation of the LD period is 17.528037564515504 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider Lc03_C21 in DD 
+
+Periods under top local maxima frequencies:
+1: 29.702668360864042
+2: 12.970196575776791
+3: 14.750924006129992
+The Lomb-Scargle approximation of the DD period is 29.697277676950996 hours.
+The False Alarm Probability for this prediction is: 0.9689912725908246
+
+Lomb-Scargle information for Spider Lc04_C22 in LD 
+
+Periods under top local maxima frequencies:
+1: 22.903503879113636
+2: 18.849058965905773
+3: 36.76080410189632
+The Lomb-Scargle approximation of the LD period is 22.900020279862098 hours.
+The False Alarm Probability for this prediction is: 7.565789626485244e-05
+
+Lomb-Scargle information for Spider Lc04_C22 in DD 
+
+Periods under top local maxima frequencies:
+1: 28.319833852544132
+2: 13.960583567954954
+3: 22.406134465288233
+The Lomb-Scargle approximation of the DD period is 28.314933379477417 hours.
+The False Alarm Probability for this prediction is: 1.6305855812956326e-16
+
+Lomb-Scargle information for Spider Lc05_C23 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.876936089231908
+2: 13.340815784032843
+3: 19.86629134412386
+The Lomb-Scargle approximation of the LD period is 12.0 hours.
+The False Alarm Probability for this prediction is: 1.5740353605532406e-23
+
+Lomb-Scargle information for Spider Lc05_C23 in DD 
+
+Periods under top local maxima frequencies:
+1: 18.52507641797804
+2: 21.77984826301078
+3: 40.938704028021014
+The Lomb-Scargle approximation of the DD period is 18.5229793977813 hours.
+The False Alarm Probability for this prediction is: 0.42914808133113047
+
+Lomb-Scargle information for Spider Lc06_C24 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.029366388253443
+2: 12.290946692427005
+3: 15.552647889263826
+The Lomb-Scargle approximation of the LD period is 24.02553191489362 hours.
+The False Alarm Probability for this prediction is: 6.130538644637941e-21
+
+Lomb-Scargle information for Spider Lc06_C24 in DD 
+
+Periods under top local maxima frequencies:
+1: 23.05000704324553
+2: 32.36392405063291
+3: 28.997341839447103
+The Lomb-Scargle approximation of the DD period is 23.046760563380282 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider Lc07_C25 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.409173360974346
+2: 28.15433522408527
+3: 17.22129022418789
+The Lomb-Scargle approximation of the LD period is 23.40553425225412 hours.
+The False Alarm Probability for this prediction is: 8.609522912741441e-52
+
+Lomb-Scargle information for Spider Lc07_C25 in DD 
+
+Periods under top local maxima frequencies:
+1: 28.29045643153527
+2: 22.95622895622896
+3: 42.948031496062995
+The Lomb-Scargle approximation of the DD period is 28.285566119273987 hours.
+The False Alarm Probability for this prediction is: 1.610576277822465e-67
+
+Lomb-Scargle information for Spider LcA01_C26 in LD 
+
+Periods under top local maxima frequencies:
+1: 12.015322409023197
+2: 23.850459393811384
+3: 17.296469326797887
+The Lomb-Scargle approximation of the LD period is 12.014363612182471 hours.
+The False Alarm Probability for this prediction is: 1.0188489943971533e-16
+
+Lomb-Scargle information for Spider LcA01_C26 in DD 
+
+Periods under top local maxima frequencies:
+1: 33.38747194450112
+2: 15.057697616637526
+3: 26.851329176238924
+The Lomb-Scargle approximation of the DD period is 33.38066095471236 hours.
+The False Alarm Probability for this prediction is: 2.3566487461837584e-11
+
+Lomb-Scargle information for Spider LcA03_C27 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.175988866884335
+2: 13.631918874871733
+3: 19.63569969134461
+The Lomb-Scargle approximation of the LD period is 12.0 hours.
+The False Alarm Probability for this prediction is: 3.2555783463298905e-05
+
+Lomb-Scargle information for Spider LcA03_C27 in DD 
+
+Periods under top local maxima frequencies:
+1: 27.542837906076418
+2: 13.637136428035669
+3: 15.077121533216623
+The Lomb-Scargle approximation of the DD period is 27.53820262537866 hours.
+The False Alarm Probability for this prediction is: 9.631438938434375e-148
+
+Lomb-Scargle information for Spider LcA05_C28 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.850352112676056
+2: 20.799410572849514
+3: 31.212770368322854
+The Lomb-Scargle approximation of the LD period is 24.846251168931182 hours.
+The False Alarm Probability for this prediction is: 1.417363646602803e-26
+
+Lomb-Scargle information for Spider LcA05_C28 in DD 
+
+Periods under top local maxima frequencies:
+1: 30.636959370904325
+2: 21.309024612579762
+3: 15.445723994713989
+The Lomb-Scargle approximation of the DD period is 30.63122426057656 hours.
+The False Alarm Probability for this prediction is: 4.790581924158639e-85
+
+Lomb-Scargle information for Spider LcA06_C29 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.933870284018653
+2: 13.991698159965306
+3: 19.707666128539643
+The Lomb-Scargle approximation of the LD period is 23.930066225165564 hours.
+The False Alarm Probability for this prediction is: 2.8174187529699004e-26
+
+Lomb-Scargle information for Spider LcA06_C29 in DD 
+
+Periods under top local maxima frequencies:
+1: 27.84277692700357
+2: 33.42839632277834
+3: 14.768231046931408
+The Lomb-Scargle approximation of the DD period is 27.83804014971079 hours.
+The False Alarm Probability for this prediction is: 6.100205647029346e-212
+
+Lomb-Scargle information for Spider LcB10_C30 in LD 
+
+Periods under top local maxima frequencies:
+1: 24.411176565962275
+2: 13.533888655839876
+The Lomb-Scargle approximation of the LD period is 24.40721928023344 hours.
+The False Alarm Probability for this prediction is: 2.3482100284485583e-06
+
+Lomb-Scargle information for Spider LcB10_C30 in DD 
+
+Periods under top local maxima frequencies:
+1: 23.856538854060357
+2: 16.405855223581312
+3: 18.356742203275747
+The Lomb-Scargle approximation of the DD period is 23.853061224489792 hours.
+The False Alarm Probability for this prediction is: 8.052339191117834e-10
+
+Lomb-Scargle information for Spider LcA02_C31 in LD 
+
+Periods under top local maxima frequencies:
+1: 12.155986758887963
+2: 22.112993243904825
+3: 14.758372814899527
+The Lomb-Scargle approximation of the LD period is 12.155005382131325 hours.
+The False Alarm Probability for this prediction is: 1.0131817124538426e-13
+
+Lomb-Scargle information for Spider LcA02_C31 in DD 
+
+Periods under top local maxima frequencies:
+1: 45.30232558139535
+2: 34.11131957473421
+3: 27.095876800794834
+The Lomb-Scargle approximation of the DD period is 45.289786880708554 hours.
+The False Alarm Probability for this prediction is: 1.0
+
+Lomb-Scargle information for Spider LcA03_C32 in LD 
+
+Periods under top local maxima frequencies:
+1: 23.873150105708245
+2: 19.99557306653681
+3: 17.02076346233561
+The Lomb-Scargle approximation of the LD period is 23.869365322623263 hours.
+The False Alarm Probability for this prediction is: 0.03463150819002207
+
+Lomb-Scargle information for Spider LcA03_C32 in DD 
+
+Periods under top local maxima frequencies:
+1: 33.634532374100715
+2: 16.555240793201133
+3: 42.768426555148984
+The Lomb-Scargle approximation of the DD period is 33.627620221948206 hours.
+The False Alarm Probability for this prediction is: 2.444046168421435e-21

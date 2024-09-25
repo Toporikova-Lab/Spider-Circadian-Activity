@@ -24,20 +24,32 @@ def data_organizer(file_name, logbook_file=None):
     This function takes in a file, creates a dataframe, organizes it, and returns the organized 
     Pandas dataframe and the numbers of the channels of the experimental subjects
     """
+    print(1)
 
-    if not logbook_file:
-        logbook_df = pd.read_csv(logbook_file, header=1)
+    if not logbook_file==None:
+        print(2)
+        logbook_df = pd.read_excel(logbook_file, header=0)
         logbook_sp_names = []
+        print(3)
         
         for index, row in logbook_df.iterrows():
-            logbook_sp_names.append(f"{row['Spider type']}{row['Spider ID']}_C{row["Channel"]:d02}")
+            print(row["Channel"])
+            print(type(row["Channel"]))
+            print(3.2)
+            logbook_sp_names.append(f"{row['Specie abbreviation']}{row['Spider ID']:02d}_C{row["Channel"]:02d}")
+            print(logbook_sp_names)
+            print(3.5)
 
+        print(4)
         logbook_df['Spider Name'] = logbook_sp_names
 
+        print(5)
         logbook_channels = logbook_df['Channel'].tolist()
+        print(6)
         logbook_df.set_index('Channel', inplace=True)
-        logbook_groups = logbook_df["Spider type"].unique()
+        logbook_groups = logbook_df["Specie abbreviation"].unique()
 
+    print(7)
     col_names = ["Index", "DateD", "DateM", "DateY", "Time", "MonStatus", "Extras", "MonN", "TubeN", "DataType", "Unused", "Light"]
     # These are the original columns in the DAM System monitors
     
@@ -49,7 +61,8 @@ def data_organizer(file_name, logbook_file=None):
         else:
             logbook_spiders.append(f"Sp{i:02d}")
     # Creating columns for each spider
-            
+
+    print(8)        
     col_names += logbook_spiders
     
     folder_path = 'Data'
@@ -232,7 +245,7 @@ def resample_df_six_mins(df, logbook_spiders, binarize = False):
 
     #if binarize = True, binarize dataframe
     if binarize:
-        df_binary = df_resampled[spider_columns].map(convert_to_one)
+        df_binary = df_resampled[logbook_spiders].map(convert_to_one)
         df_binary.insert(0, "Day", day_resampled)
         df_binary.insert(1, "Light", light_resampled)
         return df_binary

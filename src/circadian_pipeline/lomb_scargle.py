@@ -13,7 +13,7 @@ def datetime_to_jd(dt):
     jd += (hour + minute / 60 + second / 3600) / 24
     return jd
 
-def period_LS(df, spider, light_con, condition_days, group_name, info_file, LS_path, end_date, result_type='value'):
+def period_LS(df, spider, light_con, condition_days, info_file, LS_path, end_date, result_type='value'):
     valid_result_types = ['value', 'display', 'save', 'dis+save']
     if result_type not in valid_result_types:
         print("The 'result_type' parameter only takes in 'value', 'display', 'save', 'dis+save'.")
@@ -91,19 +91,19 @@ def period_LS(df, spider, light_con, condition_days, group_name, info_file, LS_p
         plt.ylabel('Power')
         plt.xlim(12, 49)
         plt.xticks(np.arange(12, 50, 2))
-        plt.title(f'Lomb-Scargle Periodogram for {group_name} {spider[-2:]} in {light_con}')
+        plt.title(f'Lomb-Scargle Periodogram for {spider[:-4]} in {light_con}')
         plt.ylim(0, max(power) * 1.1) #Sets the y-axis slightly above max_power
         
         if result_type == 'display':
             plt.show()
 
         elif result_type == 'save':
-            file_path = os.path.join(LS_path, f"LS_{group_name}_{spider[-2:]}_{light_con}_{end_date}.png")
+            file_path = os.path.join(LS_path, f"LS_{spider[:-4]}_{light_con}_{end_date}.png")
             plt.savefig(file_path)
             plt.close()
 
         else: # result_type == 'dis+save'
-            file_path = os.path.join(LS_path, f"LS_{group_name}_{spider[-2:]}_{light_con}_{end_date}.png")
+            file_path = os.path.join(LS_path, f"LS_{spider[:-4]}_{light_con}_{end_date}.png")
             plt.savefig(file_path)
             plt.show()
 

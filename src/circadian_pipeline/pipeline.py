@@ -63,9 +63,8 @@ def main():
             print(spider[-3:])
             raster.raster_plot(df_processed, spider, group_name, end_date, raster_path, condition_days, average_raster=True)
             for light_con in condition_keys:
-                period, fap = lomb_scargle.period_LS(df, spider, light_con, condition_days, group_name, info_file, LS_path, end_date, result_type=result_type_ls)
-
-
+                period, fap = lomb_scargle.period_LS(df, spider, light_con, condition_days, info_file, LS_path, end_date, result_type=result_type_ls)
+    
 
 
     raster.combined_raster(raster_path, group_name, end_date, figsize=(15, 10))
