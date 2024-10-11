@@ -70,7 +70,6 @@ def period_LS(df, spider, light_con, condition_days, info_file, LS_path, end_dat
     info_file.write(f"The False Alarm Probability for this prediction is: {fap}")
     
 
-
     if result_type != 'value':
         plt.figure(figsize=(10, 6))
         plt.plot(periods, power)

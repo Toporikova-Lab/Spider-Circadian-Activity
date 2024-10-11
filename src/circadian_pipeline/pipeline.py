@@ -29,7 +29,7 @@ def main():
     raster_path = path + "_raster_plots"
     LS_path = "LS_" + path
 
-    if not os.path.exists(LS_path):
+    if not os.path.exists(LS_path) and result_type_ls != 'value':
         os.makedirs(LS_path)
 
     if not os.path.exists(raster_path):
